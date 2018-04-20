@@ -1,0 +1,2980 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.jrlin.net/ontologies/ontobridge#"
+     xml:base="http://www.jrlin.net/ontologies/ontobridge"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:brim="http://www.jrlin.net/ontologies/2018/3/brim#"
+     xmlns:ontobridge="http://www.jrlin.net/ontologies/ontobridge#">
+    <owl:Ontology rdf:about="http://www.jrlin.net/ontologies/ontobridge"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasForceComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasForceComponent">
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasFreedomRestrain -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasFreedomRestrain">
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasLoadCaseType -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasLoadCaseType"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasMassConvType -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasMassConvType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Config"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MassConvType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSMAS: assigns whether to convert the model self-weight to masses {0}
+= 0: does not convert to masses
+= 1: converts to masses &amp; applies to X,Y,Z directions in the global coordinate system
+= 2: converts to masses &amp; applies to X,Y directions in the global coordinate system
+= 3: converts to masses &amp; applies to Z direction in the global coordinate system</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasMaterial">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Element"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasMaterialCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasMaterialCategory"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasMaterialType -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasMaterialType"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasMomentComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasMomentComponent">
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasNode -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasNode">
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Element"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasOffsetCoord -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasOffsetCoord"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasPlateType -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasPlateType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Plate"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasPosition -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasPosition"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasRefPoint -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasRefPoint">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REF: assign ref. point
+RPX: X-coordinate of ref. point
+RPY: Y-coordinate of ref. point
+RPZ: Z-coordinate of ref. point</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasRelease -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasRelease">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Beam"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Plate"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Release"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FrameRelease
+ELEM_LIST: element number
+FLAG-i: i-node of a beam element
+Fxi: release axial force of the i-node
+Fyi: release y-direction shear force at the i-node in the element local coordinate system
+Fzi: release z-direction shear force at the i-node in the element local coordinate system
+Mxi: release torsional moment at the i-node
+Myi: release moment about y-direction at the i-end in the element local coordinate system
+Mzi: release moment about z-direction at the i-end in the element local coordinate system
+2nd Line
+FLAG-j: j-node of a beam element
+Fxj: release axial force of the j-node
+Fyj: release y-direction shear force at the j-node in the element local coordinate system
+Fzj: release z-direction shear force at the j-node in the element local coordinate system
+Mxj: release torsional moment at the j-node
+Myj: release moment about y-direction at the j-end in the element local coordinate system
+Mzj: release moment about z-direction at the j-end in the element local 
+coordinate system
+Note: Partial Fixity may be entered as required</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PlateRelease
+ELEM_LIST: element number
+N1:
+Fx (Fy): releases axial stiffness in the x (y) axis direction in the element local coordinate system
+Fz: releases shear stiffness in the z-direction in the element local coordinate system
+Mx: releases bending stiffness about the x-axis in the element  local coordinate system
+My: releases bendding stiffness about the y-axis in the element local coordinate system
+N2, N3, N4: same as N1
+GROUP: Boundary Group Name
+* Can assign Partial Fixity if required</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasRelease1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasRelease1">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasRelease"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Release"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasRelease2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasRelease2">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasRelease"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Release"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasRelease3 -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasRelease3">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasRelease"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Plate"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateRelease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasRelease4 -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasRelease4">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasRelease"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Plate"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateRelease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasSection -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasSection">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarElement"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Section"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasSectionOffset -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasSectionOffset"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasStrucType -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasStrucType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Config"/>
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSTYP: structural type {0}
+= 0: 3-dimensional analysis
+= 1: 2-dimensional analysis (X-Zplane)
+= 2: 2-dimensional analysis (Y-Zplane)
+= 3: 2-dimensional analysis (X-Yplane)
+= 4: 3-dimensional analysis (restraint on rotational degree of freedom about Z-direction)</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasSupport -->
+
+    <owl:ObjectProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasSupport">
+        <rdfs:range rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Support"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#hasHeight">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#hasWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#hasWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasBetaAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasBetaAngle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANGLE: Beta Angle</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasBottomFlangeThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasBottomFlangeThickness">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFlangeThickness"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tf2</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasBottomWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasBottomWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasWidth"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B2</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasCablePretension -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasCablePretension">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#CableTenstr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXVAL: additional data related to entered elements
+=Cable: Cable Pretension</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasCoord -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasCoord">
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Element"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasDescription"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasElasticModulus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasElasticModulus">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELAST: modulus of elasticity
+Ex, Ey, Ez: modulii of elasticity in the corresponding directions</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasFilletRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasFilletRadius">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasFlangeThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasFlangeThickness">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tf</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasForceValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasForceValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasFreedomValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasFreedomValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasGapDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasGapDistance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#GapComptr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXVAL: additional data related to entered elements
+=GAP: Gap Diatance</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasGravityAccleration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasGravityAccleration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Config"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRAV: value of acceleration of gravity considering the applied units {9.806m/sec2}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasGroup -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasGroup"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasHeatCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasHeatCoefficient">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HEATCO: thermal conductivity coefficient</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasHeatValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasHeatValue">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPHEAT: specific heat</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasHookDistance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasHookDistance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#HookTenstr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXVAL: additional data related to entered elements
+=HOOK: Hook Distance</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasInPlaneThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasInPlaneThickness"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasInnerFilletRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasInnerFilletRadius">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFilletRadius"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r1</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasMomentValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasMomentValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasName"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasOutPlaneThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasOutPlaneThickness"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasOuterFilletRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasOuterFilletRadius">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFilletRadius"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r2</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasPoissonRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasPoissonRatio">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">POISN: poisson&apos;s ratio
+Pxy, Pxz, Pyz: poisson&apos;s  ratios in the corresponding directions</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasShearModulus -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasShearModulus">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sxy, Sxz, Syz: shear modulii of elasticity in the corresponding directions</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasTemperature -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasTemperature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Config"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TEMPER: initial temperature required for heat stress analysis</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasThermalExpansionCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasThermalExpansionCoefficient">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">THERMAL: coefficient of linear thermal expansion
+Tx, Ty, Tz: coefficients of linear thermal expansion in the corresponding directions</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasTopFlangeThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasTopFlangeThickness">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFlangeThickness"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tf1</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasTopWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasTopWidth">
+        <rdfs:subPropertyOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasWidth"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B1</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasUnitWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasUnitWeight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEN: weight per unit volume</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#hasWebThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#hasWebThickness">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tw</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#isAlignBeam -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#isAlignBeam">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Config"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bALIGNBEAM: alligns the tops of girders to Floor Level (YES/NO) {NO}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#isAlignSlab -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#isAlignSlab">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Config"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bALIGNSLAB: alligns the top of slabs to Floor Level (YES/NO) {NO}</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#isConsiderShear -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#isConsiderShear">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bSD: whether or not to consider shear deformation (YES/NO)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#isConsiderWrinkle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#isConsiderWrinkle">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bWE: whether or not to consider wrinkle effect (YES/NO)</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#isThicknessSame -->
+
+    <owl:DatatypeProperty rdf:about="http://www.jrlin.net/ontologies/ontobridge#isThicknessSame"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#C -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#C">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#TemperatureUnit"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#F"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#Concrete -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Concrete">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#F -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#F">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#TemperatureUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#Isotropic -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Isotropic">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialType"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Orthoropic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#N -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#N">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#Steel -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Steel">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#AngleSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#AngleSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#AxisSymmetric -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#AxisSymmetric">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Beam -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Beam">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasRelease"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameRelease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#BoxSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#BoxSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Btu -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Btu">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Buoyancy -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Buoyancy">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#CableTenstr -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#CableTenstr">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Tenstr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSUB: Sub Type
+=3: TENSTR-CABLE</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#CenterBottom -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterBottom">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#CenterCenter -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterCenter">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#CenterTop -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterTop">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#CentrifugalForce -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#CentrifugalForce">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ChannelSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ChannelSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasBottomFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasBottomWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasInnerFilletRadius"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasOuterFilletRadius"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasTopFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasTopWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#CollisionLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#CollisionLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Comptr -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Comptr">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Config -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Config">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMassConvType"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYDir"/>
+                                            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYZDir"/>
+                                            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ZDir"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasGravityAccleration"/>
+                                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMassConvType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MassConvType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasStrucType"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasStrucType"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasGravityAccleration"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#isAlignBeam"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#isAlignSlab"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Constraint -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Constraint">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PointSupport"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PointSpring"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*CONSTRAINT(Supports)
+Conditions restraining the nodal degrees of freedom
+; NODE_LIST, CONST (Dx, Dy, Dz, Rx, Ry, Rz), GROUP</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ConstructionStageLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ConstructionStageLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Creep -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Creep">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#DeadLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#DeadLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#DoubleAngleSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#DoubleAngleSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#DoubleChannelSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#DoubleChannelSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Dx -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dx">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Dy -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dy">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Dz -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dz">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#EarthPressure -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#EarthPressure">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Earthquake -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Earthquake">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Element -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Element">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasNode"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*ELEMENT
+Element Data
+; iEL, TYPE, iMAT, iPRO, iN1, iN2, ANGLE, iSUB, EXVAL ; Frame Element
+; iEL, TYPE, iMAT, iPRO, iN1, iN2, iN3, iN4, iSUB, iWID ; Planar Element
+; iEL, TYPE, iMAT, iPRO, iN1, iN2, iN3, iN4, iN5, iN6, iN7, iN8 ; Solid Element
+; iEL, TYPE, iMAT, iPRO, iN1, iN2, REF, RPX, RPY, RPZ, iSUB, EXVAL ; Frame (Ref. Point)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ErectionLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ErectionLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#FluidPressure -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#FluidPressure">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ForceComponent -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ForceComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fx"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fy"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fz"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasForceValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ForceUnit -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ForceUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#N"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kN"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kgf"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kips"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#lbf"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#tonf"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#FrameElement -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#FrameElement">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasRefPoint"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasSection"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Section"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasNode"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#FrameRelease -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#FrameRelease">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Release"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateRelease"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*FRAME-RLS (Beam End Release)
+Joining conditions of bean ends
+; ELEM_LIST, FLAG-i, Fxi, Fyi, Fzi, Mxi, Myi, Mzi   ; 1st Line
+;       FLAG-j, Fxj, Fyj, Fzj, Mxj, Myj, Mzj, GROUP  ; 2nd Line</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#FrameSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#FrameSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Section"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasSectionOffset"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#SectionOffset"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarThickness"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TODO: more section definitions are needed</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#FreedomComponent -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dx"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dy"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dz"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Rx"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Ry"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Rz"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFreedomValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Fx -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fx">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Fy -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fy">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Fz -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fz">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#GapComptr -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#GapComptr">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Comptr"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#TrussComptr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSUB: Sub Type
+=2: TENSTR-HOOK, COMPTR-GAP</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#GroundWaterPressure -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#GroundWaterPressure">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#HeatUnit -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#HeatUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Btu"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#J"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#cal"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kJ"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kcal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#HookTenstr -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#HookTenstr">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Tenstr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSUB: Sub Type
+=2: TENSTR-HOOK, COMPTR-GAP</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ISection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ISection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasBottomFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasBottomWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasInnerFilletRadius"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasOuterFilletRadius"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasTopFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasTopWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#IcePressure -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#IcePressure">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#J -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#J">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LeftBottom -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftBottom">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LeftCenter -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftCenter">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LeftTop -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftTop">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LengthUnit -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LengthUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#cm"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ft"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#in"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#m"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#mm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LiveLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LiveLoadImpact -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoadImpact">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LoadCase -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LoadCase">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasLoadCaseType"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasDescription"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*STLDCASE (Static Load Cases)
+; LCNAME, LCTYPE, DESC
+LCNAME: name of unit load case
+LCTYPE: type of unit load case
+USER = User Defined Load  
+D = Dead Load
+L = Live Load
+LR=Roof Live Load  
+W = Wind Load on Structure
+E = Earthquake
+S = Snow Load  
+R = Rain Load
+IP = Ice Pressure  
+EP = Earth Pressure
+WP = Ground Water Pressure
+FP = Fluid Pressure
+SF = Stream Flow Pressure
+B = Buoyancy
+CR = Creep
+SH = Shrinkage
+T = Temperature
+PS = Prestress
+CS = Construction Stage Load
+ER = Erection Load
+IL = Live Load Impact
+BK = Longitudinal Force from Live Load
+WL = Wind Load on Live Load
+CF = Centrifugal Force
+CO = Collision Load  
+TPG = Rib Shortening</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LoadCaseType -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Buoyancy"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CentrifugalForce"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CollisionLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ConstructionStageLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Creep"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#DeadLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#EarthPressure"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Earthquake"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ErectionLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#FluidPressure"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#GroundWaterPressure"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#IcePressure"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoadImpact"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LongitudinalForceFromLiveLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Prestress"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RainLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RibShortening"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RoofLiveLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Shrinkage"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SnowLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#StreamFlowPressure"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#TemperatureLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#UserDefinedLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnLiveLoad"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnStructure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#LongitudinalForceFromLiveLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#LongitudinalForceFromLiveLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#MassConvType -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#MassConvType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#None"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYDir"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYZDir"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ZDir"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSMAS: assigns whether to convert the model self-weight to masses {0}
+= 0: does not convert to masses
+= 1: converts to masses &amp; applies to X,Y,Z directions in the global coordinate system
+= 2: converts to masses &amp; applies to X,Y directions in the global coordinate system
+= 3: converts to masses &amp; applies to Z direction in the global coordinate system</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Material -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Material">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMaterialCategory"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#SteelReinforcedConcrete"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasElasticModulus"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasPoissonRatio"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasThermalExpansionCoefficient"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasUnitWeight"/>
+                        <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMaterialCategory"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialCategory"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMaterialType"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasElasticModulus"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasHeatCoefficient"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasHeatValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasPoissonRatio"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasShearModulus"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasThermalExpansionCoefficient"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasUnitWeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*MATERIAL
+Material property
+; iMAT, TYPE, MNAME, SPHEAT, HEATCO, [DATA1]; STEEL, CONC, USER
+; iMAT, TYPE, MNAME, SPHEAT, HEATCO, [DATA1],
+[DATA2]; SRC
+; [DATA1]: 1, DB, NAME
+2, ELAST, POISN, THERMAL, DEN
+3, Ex, Ey, Ez, Tx, Ty, Tz, Sxy, Sxz, Syz, Pxy, Pxz, Pyz, DEN : Orthotropic
+; [DATA2]: 1, DB, NAME or 2, ELAST, POISN, THERMAL, DEN</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#MaterialCategory -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#MaterialCategory">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Concrete"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Steel"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SteelReinforcedConcrete"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#UserDefinedMaterial"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#MaterialType -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#MaterialType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Isotropic"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Orthoropic"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#MomentComponent -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#MomentComponent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Mx"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#My"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Mz"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMomentValue"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Mx -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Mx">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#My -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#My">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Mz -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Mz">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#NoZRotationstruc -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#NoZRotationstruc">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Node -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Node">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasPosition"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Point"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasSupport"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PointSupport"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasPosition"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Point"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*NODE 
+Node data
+; iNO, X, Y, Z</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#None -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#None">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MassConvType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#OffsetCoord -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterBottom"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterCenter"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterTop"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftBottom"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftCenter"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftTop"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightBottom"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightCenter"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightTop"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[OFFSET]
+ = OFFSET: Location of center of a section
+     LT : Left-Top
+     CT : Center-Top
+     RT : Right-Top
+     LC : Left-Center
+     CC : Center-Center
+     RC : Right-Center
+     LB : Left-Bottom
+     CB : Center-Bottom
+     RB : Right-Bottom</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Orthoropic -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Orthoropic">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PipeSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PipeSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PlanarElement -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlanarElement">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Element"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasNode"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasNode"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasSection"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Section"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PlanarThickness -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlanarThickness">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Section"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*THICKNESS
+Thickness data for planar elements
+; iTHK, TYPE, bSAME, THIK-IN, THIK-OUT        ; TYPE=VALUE
+; iTHK, TYPE, SUBTYPE, RPOS, WEIGHT       ; TYPE=STIFFENED, SUBTYPE=VALUE
+;      SHAPE, THIK-IN, THIK-OUT, HU, HL           ; for yz section
+;      SHAPE, THIK-IN, THIK-OUT, HU, HL            ; for xz section
+; iTHK, TYPE, SUBTYPE, RPOS, PLATETHIK     ; TYPE=STIFFENED, SUBTYPE=USER
+;      bRIB {, SHAPE, DIST, SIZE1, SIZE2, ..., SIZE6}     ; for yz section
+;      bRIB {, SHAPE, DIST, SIZE2, SIZE2, ..., SIZE6}      ; for xz section
+; iTHK, TYPE, SUBTYPE, RPOS, PLATETHIK, DBNAME                     
+ ; TYPE=STIFFENED, SUBTYPE=DB
+;      bRIB {, SHAPE, DIST, SNAME}               ; for yz section
+;      bRIB {, SHAPE, DIST, SNAME}                ; for xz section</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PlaneStrain -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlaneStrain">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PlaneStress -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlaneStress">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Plate -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Plate">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarElement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasPlateType"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasRelease"/>
+                <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateRelease"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PlateRelease -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlateRelease">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Release"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMomentComponent"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Mx"/>
+                            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#My"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasGroup"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*PLATE-RLS
+Node connecting condition (Hinge, Fixed Joint) and Partial Fixity in a plate element
+; ELEM_LIST, N1, N2, N3, N4, GROUP</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PlateType -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlateType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ThickPlate"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ThinPlate"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSUB: Sub Type
+For Plate {1}
+=1: Thick   = 2: Thin</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Point -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Point">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasCoord"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PointSpring -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PointSpring">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PointSupport"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*SPRING (Point Spring Supports)
+Elastic support conditions assigned to nodes
+; NODE_LIST, SDx, SDy, SDz, SRx, SRy, SRz, GROUP</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#PointSupport -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#PointSupport">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Support"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFreedomRestrain"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFreedomRestrain"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasGroup"/>
+                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Prestress -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Prestress">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#RainLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#RainLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Release -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Release">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasForceComponent"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMomentComponent"/>
+                                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                                <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasForceComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasMomentComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#RibShortening -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#RibShortening">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#RightBottom -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightBottom">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#RightCenter -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightCenter">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#RightTop -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightTop">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#RoofLiveLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#RoofLiveLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Rx -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Rx">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Ry -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Ry">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Rz -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Rz">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FreedomComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Section -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Section">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#FrameSection"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlanarThickness"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">*SECTION (Section)
+Section data of truss or beam elements
+; iSEC, TYPE, SNAME, OFFSET, SHAPE, [DATA1], [DATA2]; 1st line - B/USER
+; iSEC, TYPE, SNAME, OFFSET, SHAPE, BLT, D1, D2, D3,
+D4, D5, D6; 1st line - VALUE
+; AREA, ASy, ASz, Ixx, Iyy, Izz      ; 2nd line
+; CyP, CyM, CzP, CzM, QyB, QzB, PERI_OUT, PERI_IN, Cy, Cz   ; 3rd line
+; Y1, Y2, Y3, Y4, Z1, Z2, Z3, Z4           ; 4th line
+; iSEC, TYPE, SNAME, OFFSET, SHAPE, iREPLACE, ELAST, DEN,
+POIS, POIC; 1st line - SRC
+; D1, D2, [DATA]                                ; 2nd line
+; iSEC, TYPE, SNAME, OFFSET, SHAPE, 1, DB, NAME1,
+NAME2, D1, D2; COMBINED
+; iSEC, TYPE, SNAME, OFFSET, SHAPE, 2, D11, D12,
+D13, D14, D15, D21, D22, D23, D24
+; iSEC, TYPE, SNAME, OFFSET, SHAPE, iyVAR, izVAR,
+STYPE   ; 1st line - TAPERED
+;      DB,NAME1,NAME2        ; 2nd line(STYPE=DB)
+;      [DIM1], [DIM2]               ; 2nd line (STYPE=USER)
+;      D11, D12, D13, D14, D15, D16; 2nd line (STYPE=VALUE)
+;      AREA1, ASy1, ASz1, Ixx1, Iyy1, Izz1; 3rd line (STYPE=VALUE)
+;      CyP1, CyM1, CzP1, CzM1, QyB1, QzB1,PERI_OUT1,PERI_IN1, Cy1, Cz1  ; 4th line (STYPE=VALUE)
+; Y11, Y12, Y13, Y14, Z11, Z12, Z13, Z14 ; 5th line (STYPE=VALUE)
+; D21, D22, D23, D24, D25, D26, D27, D28 ; 6th line (STYPE=VALUE)
+; AREA2, ASy2, ASz2, Ixx2, Iyy2, Izz2 ; 7th line (STYPE=VALUE)
+; CyP2, CyM2, CzP2, CzM2, QyB2, QzB2, PERI_OUT2, PERI_IN2, Cy2, Cz2  ; 8th line  (STYPE=VALUE)
+; Y21, Y22, Y23, Y24, Z21, Z22, Z23, Z24 ; 9th line (STYPE=VALUE)
+OPT1,OPT2, [JOINT]                 ;2nd line (STYPE=PSC)
+;       [SIZE-A]-i                               ; 3rd line (STYPE=PSC)
+;       [SIZE-B]-i                               ; 4th line (STYPE=PSC)
+;       [SIZE-C]-i                               ; 5th line (STYPE=PSC)
+;       [SIZE-D]-i                               ; 6th line (STYPE=PSC)
+;       [SIZE-A]-j                               ; 7th line (STYPE=PSC)
+;       [SIZE-B]-j                               ; 8th line (STYPE=PSC)
+;       [SIZE-C]-j                               ; 9th line (STYPE=PSC)
+;       [SIZE-D]-j                               ; 10th line (STYPE=PSC)
+; iSEC, TYPE, SNAME, OFFSET, STYPE1, STYPE2          ;1st line - CONSTRUCT
+;        SHAPE, ...(same with other type data from shape)   ; Before (STYPE1)
+;        SHAPE, ...(same with other type data from shape)  ; After  (STYPE2)
+; iSEC, TYPE, SNAME, OFFSET, SHAPE      ; 1st line - COMPOSITE-SB
+;        Hw, tw, B, Bf1, tf1, B2, Bf2, tf2                    ; 2nd line
+;        N1, N2, Hr, Hr2, tr1, tr2                              ; 3rd line
+;        SW, GN, CTC, Bc, Tc, Hh, EsEc, DsDc          ; 4th line
+; iSEC, TYPE, SNAME, OFFSET, SHAPE    ; 1st line - COMPOSITE-SI
+;        Hw, tw, B, tf1, B2, tf2                                ; 2nd line
+;        SW, GN, CTC, Bc, Tc, Hh, EsEc, DsDc         ; 3rd line
+; iSEC, TYPE, SNAME, OFFSET, SHAPE  ; 1st line - COMPOSITE- CI/CT
+;        OPT1, OPT2, [JOINT]                               ; 2nd line
+;        [SIZE-A]                                                ; 3rd line
+;        [SIZE-B]                                                ; 4th line
+;        [SIZE-C]                                                ; 5th line
+;        [SIZE-D]                                                ; 6th line
+;        SW, GN, CTC, Bc, Tc, Hh, EgdEsb, DgdDsb   ; 7th line
+; iSEC, TYPE, SNAME, OFFSET, SHAPE m         ; 1st line - PSC
+;        OPT1, OPT2, [JOINT]                               ; 2nd line
+;        [SIZE-A]                                                ; 3rd line
+;        [SIZE-B]                                                ; 4th line
+;        [SIZE-C]                                                ; 5th line
+;        [SIZE-D]                                                ;6th line;
+[DATA]: 1, DB, NAME or 2, D1, D2, D3, D4, D5, D6
+; [DIM1], [DIM2] : D1, D2, D3, D4, D5, D6
+; [JOINT]: 8(1CELL, 2CELL), 13(3CELL), 9(PSCM), 8(PSCH),9(PSCT), 2(PSCB)
+; [SIZE-A]: 6(1CELL, 2CELL), 10(3CELL), 10(PSCM),6(PSCH),  8(PSCT), 10(PSCB)
+; [SIZE-B]: 6(1CELL, 2CELL), 12(3CELL), 6(PSCM),6(PSCH), 8(PSCT), 6(PSCB)
+; [SIZE-C]: 10(1CELL,2CELL), 13(3CELL), 9(PSCM),10(PSCH),  7(PSCT), 8(PSCB)
+; [SIZE-D]: 8(1CELL, 2CELL), 13(3CELL), 6(PSCM),7(PSCH), 8(PSCT), 5(PSCB)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#SectionOffset -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#SectionOffset">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasOffsetCoord"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#OffsetCoord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">= iCENT
+0 : Centroid
+1 : Center of size = iHORZ
+0 : Size
+1 : User  = HUSER : if iHORZ is &quot;1&quot; horizontal offset distance = iVERT
+0 : Size
+1 : User = VUSER : if iVERT is &quot;1&quot;  vertical offset distance</rdfs:comment>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">[OFFSET2] : OFFSET, iCENT, iHORZ, HUSERI, HUSERJ, iVERT, VUSERI, VUSERJ</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Shrinkage -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Shrinkage">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#SnowLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#SnowLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#SolidElement -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#SolidElement">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Element"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasNode"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasNode"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">6</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasNode"/>
+                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">8</owl:qualifiedCardinality>
+                        <owl:onClass rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#SolidRectangleSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#SolidRectangleSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#StandardSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#StandardSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#isConsiderShear"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#isConsiderWrinkle"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L:Angle
+C:Channel
+I:I-Section
+T:T-Section
+B:Box
+P:Pipe
+2L:Double Angle
+2C:Double Channel
+SB:Solid Rectangle
+SR:Solid Round
+CC:Cold Formed Channel
+URIB:U-Rib
+OCT:Octagon
+SCOT:Solid Octagon
+TRK:Track
+STRK:Solid Octagon
+HTRK:Half Track
+1CEL:PCS-1CELL
+2CEL:PCS-2CELL</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#SteelReinforcedConcrete -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#SteelReinforcedConcrete">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#StiffenedThickness -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#StiffenedThickness">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarThickness"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ValuedThickness"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TODO</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#StreamFlowPressure -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#StreamFlowPressure">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#StrucType -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#StrucType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#NoZRotationstruc"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYPlaneStruc"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XZPlaneStruc"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#YZPlaneStruc"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#3DStruc"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSTYP: structural type {0}
+= 0: 3-dimensional analysis
+= 1: 2-dimensional analysis (X-Zplane)
+= 2: 2-dimensional analysis (Y-Zplane)
+= 3: 2-dimensional analysis (X-Yplane)
+= 4: 3-dimensional analysis (restraint on rotational degree of freedom about Z-direction)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Support -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Support"/>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#TSection -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#TSection">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StandardSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#hasWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#TemperatureLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#TemperatureLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#TemperatureUnit -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#TemperatureUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#C"/>
+                    <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#F"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Tenstr -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Tenstr">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ThickPlate -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ThickPlate">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateType"/>
+        <owl:disjointWith rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ThinPlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ThinPlate -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ThinPlate">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlateType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Truss -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Truss">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#TrussComptr -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#TrussComptr">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Comptr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSUB: Sub Type
+=1: TENSTR-TRUSS, COMPTR-TRUSS</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#TrussTenstr -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#TrussTenstr">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#Tenstr"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iSUB: Sub Type
+=1: TENSTR-TRUSS, COMPTR-TRUSS</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#Unit -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#Unit">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#UserDefinedLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#UserDefinedLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#UserDefinedMaterial -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#UserDefinedMaterial">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MaterialCategory"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ValuedThickness -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ValuedThickness">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#PlanarThickness"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasInPlaneThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#hasOutPlaneThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.jrlin.net/ontologies/ontobridge#isThicknessSame"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bSAME: applies the same thickness to both in-plane and out-of-plane (bending) thicknesses (YES/NO) {YES}
+THIK-IN: thickness applied to calculate the in-plane stiffness
+THIK-OUT: thickness applied to calculate the out-of-plane stiffness</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#WindLoadOnLiveLoad -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnLiveLoad">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#WindLoadOnStructure -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnStructure">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#XYDir -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYDir">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MassConvType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#XYPlaneStruc -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYPlaneStruc">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#XYZDir -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYZDir">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MassConvType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#XZPlaneStruc -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#XZPlaneStruc">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#YZPlaneStruc -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#YZPlaneStruc">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ZDir -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ZDir">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#MassConvType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#cal -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#cal">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#cm -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#cm">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#ft -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#ft">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#in -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#in">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#kJ -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#kJ">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#kN -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#kN">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#kcal -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#kcal">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#kgf -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#kgf">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#kips -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#kips">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#lbf -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#lbf">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#m -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#m">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#mm -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#mm">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#tonf -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#tonf">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#3DStruc -->
+
+    <owl:Class rdf:about="http://www.jrlin.net/ontologies/ontobridge#3DStruc">
+        <rdfs:subClassOf rdf:resource="http://www.jrlin.net/ontologies/ontobridge#StrucType"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.jrlin.net/ontologies/ontobridge#test_isection -->
+
+    <owl:NamedIndividual rdf:about="http://www.jrlin.net/ontologies/ontobridge#test_isection">
+        <rdf:type rdf:resource="http://www.jrlin.net/ontologies/ontobridge#ISection"/>
+        <brim:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">500.0</brim:hasHeight>
+        <hasTopFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">20.0</hasTopFlangeThickness>
+        <hasTopWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0</hasTopWidth>
+        <hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">16.0</hasWebThickness>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Concrete"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#Steel"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SteelReinforcedConcrete"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#UserDefinedMaterial"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#N"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kN"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kgf"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kips"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#lbf"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#tonf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/2018/3/brim#ValuePartition"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Config"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Element"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Material"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Node"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Point"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Release"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Section"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SectionOffset"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Support"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#AngleSection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#BoxSection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ChannelSection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#DoubleAngleSection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#DoubleChannelSection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ISection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#PipeSection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SolidRectangleSection"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#TSection"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#AxisSymmetric"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlaneStrain"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlaneStress"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Plate"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Beam"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Comptr"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Tenstr"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Truss"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Btu"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#J"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#cal"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kJ"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#kcal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Buoyancy"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CentrifugalForce"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CollisionLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ConstructionStageLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Creep"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#DeadLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#EarthPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Earthquake"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ErectionLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#FluidPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#GroundWaterPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#IcePressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoadImpact"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LongitudinalForceFromLiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Prestress"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RainLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RibShortening"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RoofLiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Shrinkage"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SnowLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#StreamFlowPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#TemperatureLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#UserDefinedLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnLiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnStructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Buoyancy"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CentrifugalForce"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CollisionLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ConstructionStageLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Creep"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#DeadLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#EarthPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Earthquake"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ErectionLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#FluidPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#GroundWaterPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#IcePressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LiveLoadImpact"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LongitudinalForceFromLiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Prestress"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RainLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RibShortening"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RoofLiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Shrinkage"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SnowLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#StreamFlowPressure"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#TemperatureLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnLiveLoad"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#WindLoadOnStructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CableTenstr"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#HookTenstr"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#TrussTenstr"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterBottom"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterCenter"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#CenterTop"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftBottom"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftCenter"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LeftTop"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightBottom"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightCenter"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#RightTop"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dx"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dy"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Dz"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Rx"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Ry"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Rz"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ForceComponent"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#MomentComponent"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Unit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ForceUnit"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#HeatUnit"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#LengthUnit"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#TemperatureUnit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#FrameElement"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#PlanarElement"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#SolidElement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fx"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fy"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Fz"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Mx"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#My"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#Mz"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#NoZRotationstruc"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYPlaneStruc"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XZPlaneStruc"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#YZPlaneStruc"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#3DStruc"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#None"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYDir"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#XYZDir"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ZDir"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#cm"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#ft"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#in"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#m"/>
+            <rdf:Description rdf:about="http://www.jrlin.net/ontologies/ontobridge#mm"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
