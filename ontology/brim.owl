@@ -1,0 +1,3022 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://eil.stanford.edu/ontologies/brim#"
+     xml:base="http://eil.stanford.edu/ontologies/brim"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:brim="http://eil.stanford.edu/ontologies/brim#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://eil.stanford.edu/ontologies/brim"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAnalysisProperty -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAnalysisProperty">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Analysis"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaAutoMesh -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMesh">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaAutoMesh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaEdgeConstraint -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaEdgeConstraint">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaEdgeConstraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaJointOffset -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaJointOffset">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaJointOffset"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaNode -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaNode">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaProperty -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaProperty">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Area"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaSection -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaSection">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaSpring -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaSpring">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSpring"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasCoordinateSystem -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasCoordinateSystem">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeLayout"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#CoordinateSystem"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFrequencyFunctionValue -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFrequencyFunctionValue">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionValue"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ResponseSpectrumFunction"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#SteadyStateFunction"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#FrequencyFunctionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFunction -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFunction">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAnalysisProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFunctionValue -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFunctionValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#FunctionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneProperty -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneProperty"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLayoutLine -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLayoutLine">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#LaneFromLayout"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeLayout"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineAutoMesh -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineAutoMesh">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#LineAutoMesh"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineNode -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineNode">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineProperty -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineProperty">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Line"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineRelease -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineRelease">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#LineRelease"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineSection -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineSection">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLoad -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLoad">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAnalysisProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMaterial -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaterial">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasNode1 -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasNode1">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineNode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+        <owl:propertyDisjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#hasNode2"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasNode2 -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasNode2">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineNode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasPeriodFunctionValue -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasPeriodFunctionValue">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionValue"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#ResponseSpectrumFunction"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#PeriodFunctionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasTimeSeriesFunctionValue -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasTimeSeriesFunctionValue">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionValue"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#TimeHistoryFunction"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#TimeSeriesFunctionValue"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#enableAutoMesh -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#enableAutoMesh">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAnalysisParameter -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAnalysisParameter">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Analysis"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasArc -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasArc">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaPropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaAutoMesh"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaEdgeConstraintData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaEdgeConstraintData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaPropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaEdgeConstraint"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaPropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaJointOffset"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetIndex">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetValue -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetValue">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaJointOffsetData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaPropertyData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaPropertyData"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaSectionData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaPropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaPropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSpring"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasArrivalTime -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasArrivalTime">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAutoMeshAtFrame -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAutoMeshAtFrame">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAutoMeshAtJoint -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAutoMeshAtJoint">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAutoMeshMaxDegree -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAutoMeshMaxDegree">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAutoMeshMaxLength -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAutoMeshMaxLength">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAutoMeshNumberOfSegment -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAutoMeshNumberOfSegment">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasAutoShift -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasAutoShift">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasBearing -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasBearing">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayoutSegment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasBendThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasBendThickness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasBottomFlangeThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasBottomFlangeThickness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeThickness"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasBottomFlangeWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasBottomFlangeWidth">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeWidth"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasConcreteMaterialNonlinearProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasConcreteMaterialNonlinearProperty">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasConcreteProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasConcreteProperty">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Concrete"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasConstrainedEdge -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasConstrainedEdge">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaEdgeConstraintData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasCoordinate -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasCoordinate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeLayout"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasDampingMassCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasDampingMassCoefficient">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasDampingParameter -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasDampingParameter">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasDampingStiffnessCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasDampingStiffnessCoefficient">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasDilatationalAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasDilatationalAngle">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteMaterialNonlinearProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAnalysisParameter"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#DirectIntegrationTimeHistoryAnalysis"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasDirection1Type -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasDirection1Type">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasDrillDOF -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasDrillDOF">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasEigenCutoff -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasEigenCutoff">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasEigenShift -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasEigenShift">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasEigenTolerance -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasEigenTolerance">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasElasticity -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasElasticity">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasElevation -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasElevation">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayoutSegment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasExpectedConcreteCompressiveStrength -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasExpectedConcreteCompressiveStrength">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasExpectedTensileStress -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasExpectedTensileStress">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasExpectedYieldStress -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasExpectedYieldStress">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFace -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFace">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFinalCompressionSlope -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFinalCompressionSlope">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteMaterialNonlinearProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFinalSlope -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFinalSlope">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelNonlinearProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFlangeThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFlangeThickness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFlangeWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFlangeWidth">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasForceUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasForceUnit">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasUnit"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFrictionAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFrictionAngle">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteMaterialNonlinearProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFuncitonTime -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFuncitonTime">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#TimeHistoryFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFunctionDamping -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFunctionDamping">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#ResponseSpectrumFunction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFunctionData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFunctionData"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFunctionFrequency -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFunctionFrequency">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#FrequencyFunctionValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFunctionPeriod -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFunctionPeriod">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#PeriodFunctionValue"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasFunctionValue -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFunctionValue">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFunctionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasGrade -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasGrade">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayoutSegment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasHeight -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasHeight">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasHysteresisType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasHysteresisType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasNonlinearMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasHystereticProportionalDampingMassCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasHystereticProportionalDampingMassCoefficient">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDampingParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasHystereticProportionalDampingStiffnessCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasHystereticProportionalDampingStiffnessCoefficient">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDampingParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasIntegrationMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasIntegrationMethod">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasIntegrationParameterAlpha -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasIntegrationParameterAlpha">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasIntegrationParameterBeta -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasIntegrationParameterBeta">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasIntegrationParameterGamma -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasIntegrationParameterGamma">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneData">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Lane"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationAcrossLane -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationAcrossLane">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationAlongLane -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationAlongLane">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationLane -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationLane">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationLaneFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationLaneFactor">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationSpan -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationSpan">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationSpanFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneDiscretizationSpanFactor">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneLeftType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneLeftType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneOffset -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneOffset">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneRadius">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneRightType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneRightType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneStation -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneStation">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLaneWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLaneWidth">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLaneData"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLengthUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLengthUnit">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasUnit"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#LengthUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLightWeightConcrete -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLightWeightConcrete">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineAutoMeshData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLinePropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#LineAutoMesh"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLinePropertyData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLinePropertyData"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLinePropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#LineRelease"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1R1 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1R1">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1R2 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1R2">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1R3 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1R3">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1U1 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1U1">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1U2 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1U2">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1U3 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode1U3">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2R1 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2R1">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2R2 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2R2">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2R3 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2R3">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2U1 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2U1">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2U2 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2U2">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2U3 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineReleaseNode2U3">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineReleaseData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLineSectionData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLineSectionData">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLinePropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLoadType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLoadType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAnalysisParameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLocalEdge -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLocalEdge">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasLocalFace -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasLocalFace">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMaterialAngle -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaterialAngle">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMaxModeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaxModeNumber">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMinModeNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMinModeNumber">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMinimumTensileStress -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMinimumTensileStress">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMinimumYieldStress -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMinimumYieldStress">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAnalysisParameter"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModalRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModalRatio">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDampingParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModeType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModeType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorF11 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorF11">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorF12 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorF12">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorF22 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorF22">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorM -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorM">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorM11 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorM11">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorM12 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorM12">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorM22 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorM22">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorV13 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorV13">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorV23 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorV23">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasModificationFactorW -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasModificationFactorW">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasNodeIndex -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasNodeIndex">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasNodePropertyData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasNodePropertyData -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasNodePropertyData"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasNonlinearMaterialProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasNonlinearMaterialProperty">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasNormalDirection -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasNormalDirection">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOrigin -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOrigin">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#CoordinateSystem"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOriginRX -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOriginRX">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOriginRY -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOriginRY">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOriginRZ -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOriginRZ">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOriginX -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOriginX">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOriginY -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOriginY">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOriginZ -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOriginZ">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOrigin"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOutputStepNumber -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOutputStepNumber">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasOutputStepSize -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasOutputStepSize">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasPointFromLine -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasPointFromLine">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasPointFromPoint -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasPointFromPoint">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasPoissonRatio -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasPoissonRatio">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasR -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasR">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#CylindricalNode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRadius -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRadius">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayoutSegment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRestraint -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRestraint">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasNodePropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRestraintR1 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRestraintR1">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRestraintR2 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRestraintR2">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRestraintR3 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRestraintR3">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRestraintU1 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRestraintU1">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRestraintU2 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRestraintU2">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasRestraintU3 -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasRestraintU3">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraint"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasScaleFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasScaleFactor">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAnalysisParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSegmentType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSegmentType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayoutSegment"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayoutSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasShearModulus -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasShearModulus">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSpecifiedConcreteCompressiveStrength -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSpecifiedConcreteCompressiveStrength">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStation -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStation">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBridgeLayoutPropertyData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayoutSegment"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayoutSegment"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSteelNonlinearProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSteelNonlinearProperty">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSteelProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSteelProperty">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Steel"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStiffness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStiffness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStrainAtMaximumStress -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStrainAtMaximumStress">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelNonlinearProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStrainAtOnsetOfStrainHardening -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStrainAtOnsetOfStrainHardening">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelNonlinearProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStrainAtRupture -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStrainAtRupture">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSteelNonlinearProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStrainAtUnconfinedCompressiveStrength -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStrainAtUnconfinedCompressiveStrength">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteMaterialNonlinearProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStrainStressCurveOption -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStrainStressCurveOption">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasNonlinearMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSubMesh -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSubMesh">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSubType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSubType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSupportEdge -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSupportEdge">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSupportFace -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSupportFace">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaAutoMeshData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasTemperatureDependency -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasTemperatureDependency">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasTemperatureUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasTemperatureUnit">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasUnit"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#TemperatureUnit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasThermalExpansionCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasThermalExpansionCoefficient">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasTheta -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasTheta">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#CylindricalNode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasThickness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasTimeFactor -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasTimeFactor">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDirectIntegrationTimeHistoryParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasTopFlangeThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasTopFlangeThickness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeThickness"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasTopFlangeWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasTopFlangeWidth">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeWidth"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasType -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSpringAssignmentsData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasUltimateUnconfinedStrainCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasUltimateUnconfinedStrainCapacity">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConcreteMaterialNonlinearProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasUnit -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasUnit">
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasUnitMass -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasUnitMass">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasUnitWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasUnitWeight">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGeneralMaterialProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasViscousProportionalDampingMassCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasViscousProportionalDampingMassCoefficient">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDampingParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasViscousProportionalDampingStiffenessCoefficient -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasViscousProportionalDampingStiffenessCoefficient">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDampingParameter"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasWebThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasWebThickness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasX -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasX">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianNode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasY -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasY">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianNode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasZ -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasZ">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinate"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CartesianNode"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Node"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Analysis -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Analysis"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Area -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Area">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#GeometryObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaNode"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#AreaAutoMesh -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaAutoMesh">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#AreaEdgeConstraint -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaEdgeConstraint">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#AreaJointOffset -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaJointOffset">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#AreaProperty -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#AreaSection -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaSection">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#AreaSpring -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaSpring">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayout -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayout">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeLayout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayoutSegment -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayoutSegment">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeHorizontalLayout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#BridgeLayout -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeLayout">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinateSystem"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#CoordinateSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasX"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasY"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasZ"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayout -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayout">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeLayout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayoutSegment -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayoutSegment">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayout"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CartesianCoordinateSystem -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CartesianCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#CoordinateSystem"/>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#CylindricalCoordinateSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CartesianNode -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CartesianNode">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinateSystem"/>
+                <owl:allValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianCoordinateSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasX"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasY"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasZ"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#CylindricalNode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Concrete -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Concrete">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDilatationalAngle"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasExpectedConcreteCompressiveStrength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFinalCompressionSlope"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrictionAngle"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLightWeightConcrete"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSpecifiedConcreteCompressiveStrength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasStrainAtUnconfinedCompressiveStrength"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasUltimateUnconfinedStrainCapacity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#Steel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ConcreteIsotropic -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ConcreteIsotropic">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Concrete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ConcreteUniaxial -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ConcreteUniaxial">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Concrete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CoordinateSystem -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CoordinateSystem">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOriginRX"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOriginRY"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOriginRZ"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOriginX"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOriginY"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOriginZ"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CurvedLine -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CurvedLine">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Line"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CylindricalCoordinateSystem -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CylindricalCoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#CoordinateSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CylindricalNode -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CylindricalNode">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinateSystem"/>
+                <owl:allValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#CylindricalCoordinateSystem"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasR"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasTheta"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasZ"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#DirectIntegrationTimeHistoryAnalysis -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#DirectIntegrationTimeHistoryAnalysis">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ForceUnit -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ForceUnit">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#FrequencyFunctionValue -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FrequencyFunctionValue">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FunctionValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Function -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Function"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#FunctionValue -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FunctionValue"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#GeometryObject -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#GeometryObject"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#GridLine -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#GridLine"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Lane -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Lane"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LaneFromFrame -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LaneFromFrame">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Lane"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LaneFromLayout -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LaneFromLayout">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Lane"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LengthUnit -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LengthUnit">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Line -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Line">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#GeometryObject"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSection"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasNode1"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasNode2"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineAutoMesh -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineAutoMesh">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineProperty -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineRelease -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineRelease">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineSection -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSection">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineSectionAngle -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionAngle">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineSectionIBeam -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIBeam">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBottomFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBottomFlangeWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasTopFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasTopFlangeWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineSectionTShape -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionTShape">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Material -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Material">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasElasticity"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHysteresisType"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHystereticProportionalDampingMassCoefficient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHystereticProportionalDampingStiffnessCoefficient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalRatio"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasPoissonRatio"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasShearModulus"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasStrainStressCurveOption"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasTemperatureDependency"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasThermalExpansionCoefficient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasUnitMass"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasUnitWeight"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasViscousProportionalDampingMassCoefficient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasViscousProportionalDampingStiffenessCoefficient"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ModalAnalysis -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ModalAnalysis">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#MultiStepStaticAnalysis -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MultiStepStaticAnalysis">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Node -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Node">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#GeometryObject"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#PeriodFunctionValue -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PeriodFunctionValue">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FunctionValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Plate -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Plate">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#PowerSpectralDensityFunction -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PowerSpectralDensityFunction">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ResponseSpectrumFunction -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ResponseSpectrumFunction">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Shell -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Shell">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#StaticAnalysis -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#StaticAnalysis">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#SteadyStateFunction -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SteadyStateFunction">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Steel -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Steel">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasExpectedTensileStress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasExpectedYieldStress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFinalSlope"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMinimumTensileStress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMinimumYieldStress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasStrainAtMaximumStress"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasStrainAtOnsetOfStrainHardening"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasStrainAtRupture"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#SteelIsotropic -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SteelIsotropic">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Steel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#SteelUniaxial -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SteelUniaxial">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Steel"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#StraightLine -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#StraightLine">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Line"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#TemperatureUnit -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#TemperatureUnit">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ThickPlate -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThickPlate">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Plate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ThickShell -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThickShell">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Shell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ThinPlate -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThinPlate">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Plate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ThinShell -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThinShell">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Shell"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#TimeHistoryFunction -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#TimeHistoryFunction">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Function"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#TimeSeriesFunctionValue -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#TimeSeriesFunctionValue">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FunctionValue"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#UnitSystem -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#cartesianCS -->
+
+    <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/brim#cartesianCS">
+        <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianCoordinateSystem"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#layout1 -->
+
+    <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/brim#layout1">
+        <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeLayout"/>
+        <brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</brim:hasX>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#lineSectionI -->
+
+    <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/brim#lineSectionI">
+        <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionIBeam"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#node1 -->
+
+    <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/brim#node1">
+        <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianNode"/>
+        <brim:hasCoordinateSystem rdf:resource="http://eil.stanford.edu/ontologies/brim#cartesianCS"/>
+        <brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.9</brim:hasX>
+        <brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">33.0</brim:hasY>
+        <brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.0</brim:hasZ>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#steel1 -->
+
+    <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/brim#steel1">
+        <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Steel"/>
+        <brim:hasExpectedTensileStress rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3.0</brim:hasExpectedTensileStress>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionAngle"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIBeam"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionTShape"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
