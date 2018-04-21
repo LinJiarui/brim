@@ -2064,7 +2064,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#AreaAutoMesh -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaAutoMesh">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarProperty"/>
     </owl:Class>
     
 
@@ -2072,7 +2072,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#AreaEdgeConstraint -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaEdgeConstraint">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarProperty"/>
     </owl:Class>
     
 
@@ -2080,21 +2080,15 @@
     <!-- http://eil.stanford.edu/ontologies/brim#AreaJointOffset -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaJointOffset">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarProperty"/>
     </owl:Class>
-    
-
-
-    <!-- http://eil.stanford.edu/ontologies/brim#AreaProperty -->
-
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
     
 
 
     <!-- http://eil.stanford.edu/ontologies/brim#AreaSection -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaSection">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarProperty"/>
     </owl:Class>
     
 
@@ -2102,7 +2096,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#AreaSpring -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#AreaSpring">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarProperty"/>
     </owl:Class>
     
 
@@ -2126,6 +2120,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#BridgeLayout -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#BridgeLayout">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#GeneralInformation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinateSystem"/>
@@ -2293,9 +2288,16 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#Configuration -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Configuration"/>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#CoordinateSystem -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CoordinateSystem">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#GeneralInformation"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasOriginRX"/>
@@ -2398,6 +2400,12 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#Enumeration -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Enumeration"/>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#ForceUnit -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ForceUnit">
@@ -2439,6 +2447,14 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#FrameProperty -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FrameProperty">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#FrequencyFunctionValue -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FrequencyFunctionValue">
@@ -2449,25 +2465,45 @@
 
     <!-- http://eil.stanford.edu/ontologies/brim#Function -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Function"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Function">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FunctionInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#FunctionInformation -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FunctionInformation"/>
     
 
 
     <!-- http://eil.stanford.edu/ontologies/brim#FunctionValue -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FunctionValue"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FunctionValue">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FunctionInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#GeneralInformation -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#GeneralInformation"/>
     
 
 
     <!-- http://eil.stanford.edu/ontologies/brim#GridLine -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#GridLine"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#GridLine">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#GeneralInformation"/>
+    </owl:Class>
     
 
 
     <!-- http://eil.stanford.edu/ontologies/brim#Lane -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Lane"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Lane">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#GeneralInformation"/>
+    </owl:Class>
     
 
 
@@ -2498,21 +2534,15 @@
     <!-- http://eil.stanford.edu/ontologies/brim#LineAutoMesh -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineAutoMesh">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameProperty"/>
     </owl:Class>
-    
-
-
-    <!-- http://eil.stanford.edu/ontologies/brim#LineProperty -->
-
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
     
 
 
     <!-- http://eil.stanford.edu/ontologies/brim#LineRelease -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineRelease">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameProperty"/>
     </owl:Class>
     
 
@@ -2520,7 +2550,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#LineSection -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSection">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameProperty"/>
     </owl:Class>
     
 
@@ -2582,6 +2612,36 @@
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionTShape">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
     </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Load -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Load">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LoadCase -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LoadCase">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LoadCombination -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LoadCombination">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadInformation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LoadInformation -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LoadInformation"/>
     
 
 
@@ -2741,6 +2801,14 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#PlanarProperty -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlanarProperty">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#Plate -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Plate">
@@ -2749,11 +2817,23 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#Point -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Point"/>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#PowerSpectralDensityFunction -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PowerSpectralDensityFunction">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Function"/>
     </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Property -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Property"/>
     
 
 
@@ -2777,6 +2857,14 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SolidElement">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#SolidProperty -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SolidProperty">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property"/>
     </owl:Class>
     
 
@@ -2885,6 +2973,12 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#Support -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Support"/>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#TemperatureUnit -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#TemperatureUnit">
@@ -2943,7 +3037,17 @@
 
     <!-- http://eil.stanford.edu/ontologies/brim#UnitSystem -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#UnitSystem">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Configuration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Vehicle -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Vehicle">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadInformation"/>
+    </owl:Class>
     
 
 
