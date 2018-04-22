@@ -267,6 +267,12 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMassConversionMethod -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMassConversionMethod"/>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#hasMaterial -->
 
     <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaterial">
@@ -370,6 +376,12 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#NodeSpring"/>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasStructureType -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasStructureType"/>
     
 
 
@@ -991,6 +1003,12 @@
         <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#BridgeVerticalLayoutSegment"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasGravityAccleration -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasGravityAccleration"/>
     
 
 
@@ -2247,9 +2265,7 @@
 
     <!-- http://eil.stanford.edu/ontologies/brim#hasUnit -->
 
-    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasUnit">
-        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
-    </owl:DatatypeProperty>
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasUnit"/>
     
 
 
@@ -2376,6 +2392,18 @@
         </rdfs:domain>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#isAlignBeam -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#isAlignBeam"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#isAlignSlab -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#isAlignSlab"/>
     
 
 
@@ -2717,7 +2745,38 @@
 
     <!-- http://eil.stanford.edu/ontologies/brim#Configuration -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Configuration"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Configuration">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMassConversionMethod"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#MassConversionMethod"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasStructureType"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#StructureType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasGravityAccleration"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#isAlignBeam"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#isAlignSlab"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -2890,7 +2949,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
     </owl:Class>
     
 
@@ -3122,7 +3180,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
     </owl:Class>
     
 
@@ -3911,7 +3968,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
     </owl:Class>
     
 
@@ -3982,14 +4038,6 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Unit">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
-    </owl:Class>
-    
-
-
-    <!-- http://eil.stanford.edu/ontologies/brim#UnitSystem -->
-
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#UnitSystem">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Configuration"/>
     </owl:Class>
     
 
