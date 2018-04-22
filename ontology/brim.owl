@@ -295,7 +295,7 @@
 
     <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaterial">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+        <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#Material_done"/>
     </owl:ObjectProperty>
     
 
@@ -363,6 +363,14 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#hasPlaneSectionType -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasPlaneSectionType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasPlanarProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#hasPoint_done -->
 
     <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasPoint_done">
@@ -389,6 +397,14 @@
         <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasCoordinateSystemProperty_done"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://eil.stanford.edu/ontologies/brim#Rotation_done"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasShellSectionType -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasShellSectionType">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasPlanarProperty"/>
     </owl:ObjectProperty>
     
 
@@ -651,7 +667,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#hasBendThickness -->
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasBendThickness">
-        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasThickness"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
@@ -1481,7 +1497,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData -->
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaterialPropertyData">
-        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+        <rdfs:domain rdf:resource="http://eil.stanford.edu/ontologies/brim#Material_done"/>
     </owl:DatatypeProperty>
     
 
@@ -1501,6 +1517,15 @@
         <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasModalAnalysisParameter"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMembraneThickness -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMembraneThickness">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasThickness"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
 
@@ -2528,6 +2553,12 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -2749,7 +2780,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#Concrete -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Concrete">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Material_done"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasDilatationalAngle"/>
@@ -2957,13 +2988,13 @@
     
 
 
-    <!-- http://eil.stanford.edu/ontologies/brim#Element -->
+    <!-- http://eil.stanford.edu/ontologies/brim#Element_done -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Element">
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Element_done">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterial"/>
-                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Material_done"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3243,7 +3274,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#LineElement -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineElement">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Element"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Element_done"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSection"/>
@@ -3568,9 +3599,26 @@
     
 
 
-    <!-- http://eil.stanford.edu/ontologies/brim#Material -->
+    <!-- http://eil.stanford.edu/ontologies/brim#MaterialType -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Material">
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MaterialType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Isotropic"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Orthoropic"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Uniaxial"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Material_done -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Material_done">
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterialType"/>
@@ -3715,19 +3763,10 @@
     
 
 
-    <!-- http://eil.stanford.edu/ontologies/brim#MaterialType -->
+    <!-- http://eil.stanford.edu/ontologies/brim#Membrane -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MaterialType">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Isotropic"/>
-                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Orthoropic"/>
-                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Uniaxial"/>
-                </owl:unionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Membrane">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellSectionType"/>
     </owl:Class>
     
 
@@ -3834,11 +3873,17 @@
     <!-- http://eil.stanford.edu/ontologies/brim#PlanarElement -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlanarElement">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Element"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Element_done"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSection"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterial"/>
-                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Material_done"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -3860,10 +3905,65 @@
     
 
 
-    <!-- http://eil.stanford.edu/ontologies/brim#Plate -->
+    <!-- http://eil.stanford.edu/ontologies/brim#Plane -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Plate">
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Plane">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasPlaneSectionType"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#PlaneSectionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#PlaneSectionType -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlaneSectionType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#PlaneStrain"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#PlaneStress"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#PlaneStrain -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlaneStrain">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#PlaneSectionType"/>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#PlaneStress"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#PlaneStress -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlaneStress">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#PlaneSectionType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#PlateThick -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlateThick">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellSectionType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#PlateThin -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlateThin">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellSectionType"/>
     </owl:Class>
     
 
@@ -4016,6 +4116,59 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Shell">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasShellSectionType"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellSectionType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBendThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMembraneThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ShellSectionType -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ShellSectionType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Membrane"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#PlateThick"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#PlateThin"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ShellThick"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ShellThin"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ShellThick -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ShellThick">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellSectionType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ShellThin -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ShellThin">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellSectionType"/>
     </owl:Class>
     
 
@@ -4039,7 +4192,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#SolidElement -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SolidElement">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Element"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Element_done"/>
     </owl:Class>
     
 
@@ -4077,7 +4230,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#Steel -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Steel">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Material_done"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasExpectedTensileStress"/>
@@ -4191,38 +4344,6 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
-    </owl:Class>
-    
-
-
-    <!-- http://eil.stanford.edu/ontologies/brim#ThickPlate -->
-
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThickPlate">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Plate"/>
-    </owl:Class>
-    
-
-
-    <!-- http://eil.stanford.edu/ontologies/brim#ThickShell -->
-
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThickShell">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Shell"/>
-    </owl:Class>
-    
-
-
-    <!-- http://eil.stanford.edu/ontologies/brim#ThinPlate -->
-
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThinPlate">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Plate"/>
-    </owl:Class>
-    
-
-
-    <!-- http://eil.stanford.edu/ontologies/brim#ThinShell -->
-
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ThinShell">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Shell"/>
     </owl:Class>
     
 
@@ -4649,6 +4770,16 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Membrane"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#PlateThick"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#PlateThin"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ShellThick"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ShellThin"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#N"/>
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kN"/>
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kgf"/>
@@ -4665,6 +4796,14 @@
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XZPlaneStructure"/>
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#YZPlaneStructure"/>
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#3DStructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#PlaneSectionType"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ShellSectionType"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Unit"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
