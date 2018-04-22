@@ -2528,6 +2528,31 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#Btu -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Btu">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Buoyancy -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Buoyancy">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#C -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#C">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#TemperatureUnit"/>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#F"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#CartesianCoordinateSystem -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CartesianCoordinateSystem">
@@ -2565,6 +2590,46 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CenterBottom -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CenterBottom">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CenterCenter -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CenterCenter">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CenterTop -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CenterTop">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CentrifugalForce -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CentrifugalForce">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#CollisionLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CollisionLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
     </owl:Class>
     
 
@@ -2656,6 +2721,14 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#ConstructionStageLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ConstructionStageLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#CoordinateSystem -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#CoordinateSystem">
@@ -2672,6 +2745,14 @@
                 <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Rotation_done"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Creep -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Creep">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
     </owl:Class>
     
 
@@ -2728,6 +2809,7 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#DeadLoad">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Load"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
     </owl:Class>
     
 
@@ -2740,21 +2822,74 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#EarthPressure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#EarthPressure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Earthquake -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Earthquake">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#Element -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Element"/>
     
 
 
-    <!-- http://eil.stanford.edu/ontologies/brim#Enumeration -->
+    <!-- http://eil.stanford.edu/ontologies/brim#Enumeration_done -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Enumeration"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ErectionLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ErectionLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#F -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#F">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#TemperatureUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#FluidPressure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FluidPressure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
     
 
 
     <!-- http://eil.stanford.edu/ontologies/brim#ForceUnit -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ForceUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#N"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kN"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kgf"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kips"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#lbf"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#tonf"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
     </owl:Class>
     
@@ -2837,6 +2972,57 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#GroundWaterPressure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#GroundWaterPressure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#HeatUnit -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#HeatUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Btu"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#J"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#cal"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kJ"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kcal"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#IcePressure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#IcePressure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Isotropic -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Isotropic">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MaterialType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#J -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#J">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#HeatUnit"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#Lane -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Lane">
@@ -2897,9 +3083,45 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#LeftBottom -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LeftBottom">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LeftCenter -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LeftCenter">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LeftTop -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LeftTop">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#LengthUnit -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LengthUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#cm"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ft"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#in"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#m"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#mm"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
     </owl:Class>
     
@@ -2989,6 +3211,22 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#LiveLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LiveLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LiveLoadImpact -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LiveLoadImpact">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#Load -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Load">
@@ -2997,9 +3235,74 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#LoadCaseType -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LoadCaseType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Buoyancy"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CentrifugalForce"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CollisionLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ConstructionStageLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Creep"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#DeadLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#EarthPressure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Earthquake"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ErectionLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#FluidPressure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#GroundWaterPressure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#IcePressure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LiveLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LiveLoadImpact"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LongitudinalForceFromLiveLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Prestress"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RainLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RibShortening"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RoofLiveLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Shrinkage"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#SnowLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#StreamFlowPressure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#TemperatureLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#UserDefinedLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#WindLoadOnLiveLoad"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#WindLoadOnStructure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#LoadInformation_done -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LoadInformation_done"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LongitudinalForceFromLiveLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LongitudinalForceFromLiveLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#MassConversionMethod -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MassConversionMethod">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XYDirection"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XYZDirection"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ZDirection"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
     
 
 
@@ -3108,6 +3411,23 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#MaterialType -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MaterialType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Isotropic"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Orthoropic"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Uniaxial"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#ModalAnalysis -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ModalAnalysis">
@@ -3120,6 +3440,22 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MultiStepStaticAnalysis">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Analysis_done"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#N -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#N">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#NoZRotationStructure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#NoZRotationStructure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#StructureType"/>
     </owl:Class>
     
 
@@ -3171,6 +3507,14 @@
                 <owl:onClass rdf:resource="http://eil.stanford.edu/ontologies/brim#Support_done"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Orthoropic -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Orthoropic">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MaterialType"/>
     </owl:Class>
     
 
@@ -3240,9 +3584,25 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#Prestress -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Prestress">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#Property -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Property"/>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#RainLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#RainLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
     
 
 
@@ -3256,6 +3616,46 @@
                 <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#PeriodFunctionValue"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#RibShortening -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#RibShortening">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#RightBottom -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#RightBottom">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#RightCenter -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#RightCenter">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#RightTop -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#RightTop">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#RoofLiveLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#RoofLiveLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
     </owl:Class>
     
 
@@ -3285,10 +3685,49 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#SectionAlignment -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SectionAlignment">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CenterBottom"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CenterCenter"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CenterTop"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LeftBottom"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LeftCenter"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LeftTop"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RightBottom"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RightCenter"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RightTop"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#Shell -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Shell">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#AreaSection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Shrinkage -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Shrinkage">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#SnowLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SnowLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
     </owl:Class>
     
 
@@ -3419,15 +3858,59 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#StreamFlowPressure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#StreamFlowPressure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#StructureType -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#StructureType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#NoZRotationStructure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XYPlaneStructure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XZPlaneStructure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#YZPlaneStructure"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#3DStructure"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#Support_done -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Support_done"/>
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#TemperatureLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#TemperatureLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#TemperatureUnit -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#TemperatureUnit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#C"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#F"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#UnitSystem"/>
     </owl:Class>
     
@@ -3487,10 +3970,34 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#Uniaxial -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Uniaxial">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MaterialType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#Unit -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Unit">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration_done"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#UnitSystem -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#UnitSystem">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Configuration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#UserDefinedLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#UserDefinedLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
     </owl:Class>
     
 
@@ -3515,6 +4022,182 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#VehicleLoad">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadInformation_done"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#WindLoadOnLiveLoad -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#WindLoadOnLiveLoad">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#WindLoadOnStructure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#WindLoadOnStructure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#XYDirection -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#XYDirection">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MassConversionMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#XYPlaneStructure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#XYPlaneStructure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#StructureType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#XYZDirection -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#XYZDirection">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MassConversionMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#XZPlaneStructure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#XZPlaneStructure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#StructureType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#YZPlaneStructure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#YZPlaneStructure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#StructureType"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ZDirection -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ZDirection">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MassConversionMethod"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#cal -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#cal">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#cm -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#cm">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ft -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ft">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#in -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#in">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#kJ -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#kJ">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#kN -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#kN">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#kcal -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#kcal">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#HeatUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#kgf -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#kgf">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#kips -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#kips">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#lbf -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#lbf">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#m -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#m">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#mm -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#mm">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LengthUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#tonf -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#tonf">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#3DStructure -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#3DStructure">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#StructureType"/>
     </owl:Class>
     
 
@@ -3586,14 +4269,136 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Btu"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#J"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#cal"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kJ"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kcal"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Buoyancy"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CentrifugalForce"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CollisionLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ConstructionStageLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Creep"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#DeadLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#EarthPressure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Earthquake"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ErectionLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#FluidPressure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#GroundWaterPressure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#IcePressure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LiveLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LiveLoadImpact"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LongitudinalForceFromLiveLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Prestress"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RainLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RibShortening"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RoofLiveLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Shrinkage"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#SnowLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#StreamFlowPressure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#TemperatureLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#UserDefinedLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#WindLoadOnLiveLoad"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#WindLoadOnStructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CenterBottom"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CenterCenter"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#CenterTop"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LeftBottom"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LeftCenter"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LeftTop"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RightBottom"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RightCenter"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#RightTop"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ForceUnit"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#HeatUnit"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LengthUnit"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#TemperatureUnit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Isotropic"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Orthoropic"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Uniaxial"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionAngle"/>
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIBeam"/>
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionTShape"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LoadCaseType"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#MassConversionMethod"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#MaterialType"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#SectionAlignment"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#StructureType"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#Unit"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#N"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kN"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kgf"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#kips"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#lbf"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#tonf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#NoZRotationStructure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XYPlaneStructure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XZPlaneStructure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#YZPlaneStructure"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#3DStructure"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XYDirection"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#XYZDirection"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ZDirection"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#cm"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ft"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#in"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#m"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#mm"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
 
 
-<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
 
