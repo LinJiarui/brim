@@ -3024,42 +3024,6 @@
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#FrameRelease">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineProperty"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseR1"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseR2"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseR3"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseU1"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseU2"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseU3"/>
-                        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                        <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-                    </owl:Restriction>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseR1"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
@@ -3093,6 +3057,13 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseU3"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFrameReleaseData"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
@@ -3327,7 +3298,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#LineProperty -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineProperty">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property_done"/>
     </owl:Class>
     
 
@@ -3849,9 +3820,45 @@
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Support_done"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraintR1"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraintR2"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraintR3"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraintU1"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraintU2"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraintU3"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasRestraintData"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#NodeSpring"/>
@@ -3940,7 +3947,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#PlanarProperty -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#PlanarProperty">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property_done"/>
     </owl:Class>
     
 
@@ -4036,9 +4043,9 @@
     
 
 
-    <!-- http://eil.stanford.edu/ontologies/brim#Property -->
+    <!-- http://eil.stanford.edu/ontologies/brim#Property_done -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Property"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Property_done"/>
     
 
 
@@ -4240,7 +4247,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#SolidProperty -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#SolidProperty">
-        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property"/>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Property_done"/>
     </owl:Class>
     
 
