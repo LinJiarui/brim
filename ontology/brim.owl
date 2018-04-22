@@ -1901,6 +1901,14 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#hasShearDeformation -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasShearDeformation">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#hasShearModulus -->
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasShearModulus">
@@ -2351,6 +2359,22 @@
         <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasWidth -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasWidth">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#hasWrinkleEffect -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasWrinkleEffect">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
     </owl:DatatypeProperty>
     
 
@@ -2899,7 +2923,14 @@
 
     <!-- http://eil.stanford.edu/ontologies/brim#Element -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Element"/>
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#Element">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
     
 
 
@@ -3204,6 +3235,18 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSection">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameProperty"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasShearDeformation"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasWrinkleEffect"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -3212,13 +3255,37 @@
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionAngle">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
 
-    <!-- http://eil.stanford.edu/ontologies/brim#LineSectionIBeam -->
+    <!-- http://eil.stanford.edu/ontologies/brim#LineSectionCShape -->
 
-    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIBeam">
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionCShape">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -3260,10 +3327,98 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#LineSectionIShape -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIShape">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBottomFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasBottomFlangeWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasTopFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasTopFlangeWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#LineSectionRectangle -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionRectangle">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#LineSectionTShape -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionTShape">
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSection"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasFlangeWidth"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasHeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasWebThickness"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -4281,7 +4436,7 @@
     <!-- http://eil.stanford.edu/ontologies/brim#lineSectionI -->
 
     <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/brim#lineSectionI">
-        <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionIBeam"/>
+        <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionIShape"/>
     </owl:NamedIndividual>
     
 
@@ -4390,7 +4545,17 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionAngle"/>
-            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIBeam"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionCShape"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIShape"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionRectangle"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionTShape"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionAngle"/>
+            <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionIShape"/>
             <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LineSectionTShape"/>
         </owl:members>
     </rdf:Description>
