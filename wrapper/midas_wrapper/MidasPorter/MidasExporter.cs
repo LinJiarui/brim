@@ -39,7 +39,9 @@ namespace Porter.Midas
                     using (StreamWriter writer = new StreamWriter(fileStream, Encoding.Default))
                     {
                         writer.WriteLine("*VERSION");
-                        writer.WriteLine(" 7.3.0");
+                        //TODO version of midas has impact on how to import the data
+                        //previous version is 7.3.0, and has no parameters like bROTRIGID
+                        writer.WriteLine(" 8.6.5");
                         writer.WriteLine();
                         WriteUnitInfoToMGT(writer);
                         WriteStructtypeInfoToMGT(writer);
@@ -155,6 +157,14 @@ namespace Porter.Midas
             }
             if (_midasPorterData.StructypeEntity.AlignSlab)
             {
+                writer.Write("YES,");
+            }
+            else
+            {
+                writer.Write("NO,");
+            }
+            if (_midasPorterData.StructypeEntity.RotateRigid)
+            {
                 writer.Write("YES");
             }
             else
@@ -174,6 +184,7 @@ namespace Porter.Midas
                 writer.Write(mat.MatType + ",");
                 writer.Write(mat.MatName + ",");
                 writer.Write("0,0, ,C,NO,");
+                writer.Write(mat.DampRatio+",");
                 writer.Write(mat.DataType + ",");
                 switch (mat.DataType)
                 {
@@ -217,7 +228,7 @@ namespace Porter.Midas
                     MidasRectangleSectionEntity section = item as MidasRectangleSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("SB,");
                     writer.Write("2,");
                     writer.Write(section.Height + "," + section.Width + ",");
@@ -228,7 +239,7 @@ namespace Porter.Midas
                     MidasAngleSectionEntity section = item as MidasAngleSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("L,");
                     writer.Write("2,");
                     writer.Write(section.H + "," + section.B + "," + section.Tw + "," + section.Tf + ",");
@@ -239,7 +250,7 @@ namespace Porter.Midas
                     MidasBoxSectionEntity section = item as MidasBoxSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("B,");
                     writer.Write("2,");
                     writer.Write(section.H + "," + section.B + "," + section.Tw + "," + section.Tf1 + "," + section.C + "," + section.Tf2 + ",");
@@ -250,7 +261,7 @@ namespace Porter.Midas
                     MidasCircleSectionEntity section = item as MidasCircleSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("SR,");
                     writer.Write("2,");
                     writer.Write(section.Diameter + ",");
@@ -261,7 +272,7 @@ namespace Porter.Midas
                     MidasDoubleAngleSectionEntity section = item as MidasDoubleAngleSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("2L,");
                     writer.Write("2,");
                     writer.Write(section.H + "," + section.B + "," + section.Tw + "," + section.Tf + "," + section.C + ",");
@@ -272,7 +283,7 @@ namespace Porter.Midas
                     MidasGongSectionEntity section = item as MidasGongSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("H,");
                     writer.Write("2,");
                     writer.Write(section.H + "," + section.B1 + "," + section.TW + "," + section.T1 + "," + section.B2 + "," + section.T2 + ",");
@@ -283,7 +294,7 @@ namespace Porter.Midas
                     MidasPipeSectionEntity section = item as MidasPipeSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("P,");
                     writer.Write("2,");
                     writer.Write(section.D + "," + section.Tw + ",");
@@ -294,7 +305,7 @@ namespace Porter.Midas
                     MidasTeeSectionEntity section = item as MidasTeeSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     if (section.IsUnderT)
                     {
                         writer.Write("UDT,");
@@ -316,7 +327,7 @@ namespace Porter.Midas
                     MidasChannelSectionEntity section = item as MidasChannelSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,");
+                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
                     writer.Write("CC,");
                     writer.Write("2,");
                     writer.Write(section.H + "," + section.B + "," + section.Tw + "," + section.r + "," + section.d + ",");
@@ -325,7 +336,9 @@ namespace Porter.Midas
             }
             writer.WriteLine();
 
-            writer.WriteLine("*SECT-PSCVALUE");
+            if(_midasPorterData.SecDict.Values.Any(s=>s is MidasCustomSectionEntity)){
+                writer.WriteLine("*SECT-PSCVALUE");
+            }
             foreach (MidasSectionEntity item in _midasPorterData.SecDict.Values)
             {
                 if (item is MidasCustomSectionEntity)

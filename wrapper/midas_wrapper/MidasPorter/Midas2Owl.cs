@@ -210,10 +210,8 @@ namespace Porter.Midas
                 writer.WriteLine(FormatPrimitiveProperty("brim", "hasThermalConductivityCoefficient", mat.HeatCo));
                 writer.WriteLine(FormatPrimitiveProperty("brim", "hasSpecificHeat", mat.Spheat));
                 writer.WriteLine(FormatPrimitiveProperty("brim", "hasUnitWeight", mat.Den));
-                if (mat.BMass)
-                {
-                    writer.WriteLine(FormatPrimitiveProperty("brim", "hasUnitMass", mat.Mass));
-                }
+                writer.WriteLine(FormatPrimitiveProperty("brim", "hasUnitMass", mat.Mass));
+                
                 if (mat.DataType == "3")
                 {
                     writer.WriteLine(FormatIndividualProperty("brim", "hasMaterialType", "_Orthoropic"));

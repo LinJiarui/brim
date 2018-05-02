@@ -5,7 +5,7 @@ using Utility;
 
 namespace Porter.Midas.Entities
 {
-    public class MidasStructypeEntity 
+    public class MidasStructypeEntity
     {
         private string _strucType;
         private string _invertMass;
@@ -16,6 +16,7 @@ namespace Porter.Midas.Entities
         private double _temper;
         private bool _alignBeam;
         private bool _alignSlab;
+        private bool _rotateRigid;
 
         public string StrucType { get { return _strucType; } set { _strucType = value; } }
         public string InvertMass { get { return _invertMass; } set { _invertMass = value; } }
@@ -26,6 +27,7 @@ namespace Porter.Midas.Entities
         public double Temper { get { return _temper; } set { _temper = value; } }
         public bool AlignBeam { get { return _alignBeam; } set { _alignBeam = value; } }
         public bool AlignSlab { get { return _alignSlab; } set { _alignSlab = value; } }
+        public bool RotateRigid { get{ return _rotateRigid;} set {_rotateRigid = value;} }
 
         public void ReadStrings(StreamReader sr)
         {
@@ -34,7 +36,7 @@ namespace Porter.Midas.Entities
             {
                 str = sr.ReadLine();
             }
-            List<string> strList = StringUtility.Split(str,",");
+            List<string> strList = StringUtility.Split(str, ",");
             _strucType = strList[0];
             _invertMass = strList[1];
             _howToMass = strList[2];
@@ -44,6 +46,7 @@ namespace Porter.Midas.Entities
             _temper = Convert.ToDouble(strList[6]);
             _alignBeam = (strList[7] == "YES" ? true : false);
             _alignSlab = (strList[8] == "YES" ? true : false);
+            _rotateRigid = (strList[9] == "YES" ? true : false);            
         }
     }
 }

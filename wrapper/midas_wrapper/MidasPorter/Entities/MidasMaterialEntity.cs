@@ -32,6 +32,7 @@ namespace Porter.Midas.Entities
         public string MatNumber { get { return _matNumber; } set { _matNumber = value; } }
         public string MatType { get { return _matType; } set { _matType = value; } }
         public string MatName { get { return _matName; } set { _matName = value; } }
+        public double DampRatio { get; set; }
         public double Spheat { get { return _spheat; } set { _spheat = value; } }
         public double HeatCo { get { return _heatCo; } set { _heatCo = value; } }
         public string Plast { get { return _plast; } set { _plast = value; } }
@@ -65,6 +66,7 @@ namespace Porter.Midas.Entities
             }
             while (str != "")
             {
+                //TODO import DampRatio
                 strList = StringUtility.Split(str, ",");
                 mat=new MidasMaterialEntity();
                 matID = strList[0];
