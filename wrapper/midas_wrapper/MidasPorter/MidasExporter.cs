@@ -48,6 +48,7 @@ namespace Porter.Midas
                         WriteMaterialInfoToMGT(writer);
                         WriteSectionInfoToMGT(writer);
                         WriteThickInfoToMGT(writer);
+                        WriteConstraintInfoToMGT(writer);
                         writer.WriteLine("*ENDDATA");
                         writer.WriteLine();
                     }
@@ -472,6 +473,18 @@ namespace Porter.Midas
                 writer.Write("VALUE,YES,");
                 writer.Write(thick.ThickIn + ",");
                 writer.WriteLine(thick.ThickOut);
+            }
+            writer.WriteLine();
+        }
+
+         private void WriteConstraintInfoToMGT(StreamWriter writer)
+        {
+            writer.WriteLine("*CONSTRAINT");
+            foreach (var  kv in _midasPorterData.SupportDict)
+            {
+                writer.Write(kv.Key + ",");
+                writer.Write(kv.Value + ",");
+                writer.WriteLine("");
             }
             writer.WriteLine();
         }
