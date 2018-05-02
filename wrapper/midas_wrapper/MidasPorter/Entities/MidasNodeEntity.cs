@@ -13,9 +13,9 @@ namespace Porter.Midas.Entities
 
         public string NodeNumber { get { return _nodeNumber; } set { _nodeNumber = value; } }
         public Vector3 Coord { get { return _coord; } set { _coord = value; } }
-        public double X { get { return _coord.X; } }
-        public double Y { get { return _coord.Y; } }
-        public double Z { get { return _coord.Z; } }
+        public double X { get { return _coord.X; }set{_coord.X=value;} }
+        public double Y { get { return _coord.Y; } set{_coord.Y=value;}}
+        public double Z { get { return _coord.Z; } set{_coord.Z=value;}}
         public MidasNodeEntity() { _coord = new Vector3(); }
         public MidasNodeEntity(string Number, Vector3 vector)
         {
