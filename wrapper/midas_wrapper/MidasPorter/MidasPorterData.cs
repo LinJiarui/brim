@@ -23,8 +23,8 @@ namespace Porter.Midas
         private Dictionary<string, MidasThicknessEntity> _thickDict = new Dictionary<string, MidasThicknessEntity>();
         private Dictionary<string, MidasStldcaseEntity> _stldcaseDict = new Dictionary<string, MidasStldcaseEntity>();
         private Dictionary<string, MidasStoryEntity> _storyDict = new Dictionary<string, MidasStoryEntity>();
-        private Dictionary<int, string> _supportDict;
-        private Dictionary<string, MidaseLineRelease> _frameReleaseDict;
+        private Dictionary<int, string> _supportDict=new Dictionary<int, string>();
+        private Dictionary<string, MidaseLineRelease> _frameReleaseDict=new Dictionary<string, MidaseLineRelease>();
 
         public MidasVersionEntity VersionEntity { get { return _versionEntity; } set { _versionEntity = value; } }
         public MidasUnitEntity UnitEntity { get { return _unitEntity; } set { _unitEntity = value; } }

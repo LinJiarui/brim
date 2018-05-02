@@ -17,15 +17,15 @@ namespace Porter.Midas.Entities
         private bool _alignBeam;
         private bool _alignSlab;
 
-        public string StrucType { get { return _strucType; } set { StrucType = value; } }
-        public string InvertMass { get { return _invertMass; } set { InvertMass = value; } }
-        public string HowToMass { get { return _howToMass; } set { InvertMass = value; } }
+        public string StrucType { get { return _strucType; } set { _strucType = value; } }
+        public string InvertMass { get { return _invertMass; } set { _invertMass = value; } }
+        public string HowToMass { get { return _howToMass; } set { _howToMass = value; } }
         public bool MassOffset { get { return _massOffset; } set { _massOffset = value; } }
         public bool SelfWeight { get { return _selfWeight; } set { _selfWeight = value; } }
-        public double Gravity { get { return _gravity; } set { Gravity = value; } }
-        public double Temper { get { return _temper; } set { Temper = value; } }
-        public bool AlignBeam { get { return _alignBeam; } set { AlignBeam = value; } }
-        public bool AlignSlab { get { return _alignSlab; } set { AlignSlab = value; } }
+        public double Gravity { get { return _gravity; } set { _gravity = value; } }
+        public double Temper { get { return _temper; } set { _temper = value; } }
+        public bool AlignBeam { get { return _alignBeam; } set { _alignBeam = value; } }
+        public bool AlignSlab { get { return _alignSlab; } set { _alignSlab = value; } }
 
         public void ReadStrings(StreamReader sr)
         {
