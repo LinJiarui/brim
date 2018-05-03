@@ -269,6 +269,7 @@ namespace Porter.Midas
                 switch (section.Shape)
                 {
                     case "T":
+                    case "UDT":                    
                         secType = "LineSectionTShape";
                         writer.WriteLine(FormatIndividualType("brim", secType));
                         var tee = section as MidasTeeSectionEntity;

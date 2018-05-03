@@ -51,6 +51,7 @@ namespace Porter.Midas
                         WriteSectionInfoToMGT(writer);
                         WriteThickInfoToMGT(writer);
                         WriteConstraintInfoToMGT(writer);
+                        WriteFrameReleaseInfoToMGT(writer);
                         writer.WriteLine("*ENDDATA");
                         writer.WriteLine();
                     }
@@ -193,7 +194,8 @@ namespace Porter.Midas
                         break;
                     case "2":
                         writer.Write(mat.Es[0] + "," + mat.Ps[0] + "," + mat.Ts[0] + ",");
-                        writer.Write("0,");
+                        writer.Write(mat.Den+",");
+                        //writer.Write("0,");
                         writer.Write(mat.Mass);
                         break;
                     case "3":
@@ -201,6 +203,7 @@ namespace Porter.Midas
                         for (i = 0; i <= 2; i++) { writer.Write(mat.Ts[i] + ","); }
                         for (i = 0; i <= 2; i++) { writer.Write(mat.Ss[i] + ","); }
                         for (i = 0; i <= 2; i++) { writer.Write(mat.Ps[i] + ","); }
+                        writer.Write(mat.Den+",");
                         writer.Write(mat.Mass);
                         break;
                 }
@@ -490,7 +493,7 @@ namespace Porter.Midas
             writer.WriteLine();
         }
 
-         private void WriteConstraintInfoToMGT(StreamWriter writer)
+        private void WriteConstraintInfoToMGT(StreamWriter writer)
         {
             writer.WriteLine("*CONSTRAINT");
             foreach (var  kv in _midasPorterData.SupportDict)
@@ -498,6 +501,32 @@ namespace Porter.Midas
                 writer.Write(kv.Key + ",");
                 writer.Write(kv.Value + ",");
                 writer.WriteLine("");
+            }
+            writer.WriteLine();
+        }
+
+        private void WriteFrameReleaseInfoToMGT(StreamWriter writer)
+        {
+            writer.WriteLine("*FRAME-RLS");
+            foreach (var  kv in _midasPorterData.FrameReleaseDict)
+            {
+                writer.Write(kv.Key + ",");
+                var val=kv.Value;
+                writer.Write(val.HasComponentValue? "YES,":"NO,");
+                for(int i=0;i<6;i++){
+                    writer.Write(val.ReleaseComponentsAtI[i]?"1":"0");
+                }
+                for(int i=0;i<6;i++){
+                    writer.Write(","+val.ComponentValuesAtI[i]);
+                }
+                writer.WriteLine("");
+                for(int i=0;i<6;i++){
+                    writer.Write(val.ReleaseComponentsAtJ[i]?"1":"0");
+                }
+                for(int i=0;i<6;i++){
+                    writer.Write(","+val.ComponentValuesAtJ[i]);
+                }
+                writer.WriteLine(",");                
             }
             writer.WriteLine();
         }
