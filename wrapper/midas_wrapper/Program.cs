@@ -10,8 +10,8 @@ namespace midas_wrapper
         {
             if(args.Length==0){
                 Console.WriteLine("please specify the input file");
-                Midas2Owl("../../data/New_TRB_v2-manual-v2.1.mgt","../../ontology/New_TRB_v2-manual-v2.1_midas.owl");
-                Owl2Midas("../../ontology/New_TRB_v2-manual-v2.1_midas.owl","../../data/New_TRB_v2-manual-v2.1_auto.mgt");
+                Midas2Owl("./data/simple_bridge.mgt","./data/simple_bridge.owl");
+                Owl2Midas("./data/simple_bridge.owl","./data/simple_bridge_auto.mgt");
                 return;
             }
             foreach(var f in args){
