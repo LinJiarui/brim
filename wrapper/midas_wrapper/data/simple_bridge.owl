@@ -15,6 +15,7 @@
 <brim:hasGravityAccleration rdf:datatype="http://www.w3.org/2001/XMLSchema#double">386.063</brim:hasGravityAccleration>
 <brim:isAlignBeam rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</brim:isAlignBeam>
 <brim:isAlignSlab rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</brim:isAlignSlab>
+<brim:hasMassType rdf:resource="http://eil.stanford.edu/ontologies/trb#_ConsistentMass"/>
 <brim:hasMassConversionMethod rdf:resource="http://eil.stanford.edu/ontologies/trb#_XYZDirection"/>
 <brim:hasStructureType rdf:resource="http://eil.stanford.edu/ontologies/trb#_XZPlaneStructure"/>
 <brim:hasForceUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_kips"/>
@@ -99,6 +100,12 @@
 </owl:NamedIndividual>
 <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_ZDirection">
 <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#ZDirection"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_LumpedMass">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LumpedMass"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_ConsistentMass">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#ConsistentMass"/>
 </owl:NamedIndividual>
 <owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Material_1">
 <rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Concrete"/>

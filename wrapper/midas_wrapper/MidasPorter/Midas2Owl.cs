@@ -16,6 +16,7 @@ namespace Porter.Midas
         protected Dictionary<string, string> unit_mapper = new Dictionary<string, string>();
         protected Dictionary<string, string> struct_type_mapper = new Dictionary<string, string>();
         protected Dictionary<string, string> mass_conversion_mapper = new Dictionary<string, string>();
+        protected Dictionary<string, string> mass_type_mapper = new Dictionary<string, string>();
         public Midas2Owl(string base_xmlns, MidasPorterData data)
         {
             this.base_uri = base_xmlns;
@@ -55,6 +56,9 @@ namespace Porter.Midas
             mass_conversion_mapper["1"] = "XYZDirection";
             mass_conversion_mapper["2"] = "XYDirection";
             mass_conversion_mapper["3"] = "ZDirection";
+
+            mass_type_mapper["1"] = "LumpedMass";
+            mass_type_mapper["2"] = "ConsistentMass";
         }
         /// <summary>
         /// 
@@ -123,6 +127,10 @@ namespace Porter.Midas
             writer.WriteLine(FormatPrimitiveProperty("brim", "hasGravityAccleration", porter_data.StructypeEntity.Gravity));
             writer.WriteLine(FormatPrimitiveProperty("brim", "isAlignBeam", porter_data.StructypeEntity.AlignBeam));
             writer.WriteLine(FormatPrimitiveProperty("brim", "isAlignSlab", porter_data.StructypeEntity.AlignSlab));
+            if (!string.IsNullOrWhiteSpace(porter_data.StructypeEntity.MassType) && porter_data.StructypeEntity.MassType != "0")
+            {
+                writer.WriteLine(FormatIndividualProperty("brim", "hasMassType", "_" + mass_type_mapper[porter_data.StructypeEntity.MassType.ToLower()]));
+            }
             if (!string.IsNullOrWhiteSpace(porter_data.StructypeEntity.HowToMass) && porter_data.StructypeEntity.HowToMass != "0")
             {
                 writer.WriteLine(FormatIndividualProperty("brim", "hasMassConversionMethod", "_" + mass_conversion_mapper[porter_data.StructypeEntity.HowToMass.ToLower()]));
@@ -181,6 +189,9 @@ namespace Porter.Midas
             ExportEnumIndividual(writer, "brim", "XYDirection");
             ExportEnumIndividual(writer, "brim", "XYZDirection");
             ExportEnumIndividual(writer, "brim", "ZDirection");
+
+            ExportEnumIndividual(writer, "brim", "LumpedMass");
+            ExportEnumIndividual(writer, "brim", "ConsistentMass");
         }
 
         private void ExportMaterials(StreamWriter writer)

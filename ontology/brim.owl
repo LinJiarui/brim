@@ -527,6 +527,12 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#hasMassType -->
+
+    <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMassType"/>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#hasMaterial -->
 
     <owl:ObjectProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMaterial">
@@ -3422,6 +3428,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasMassType"/>
+                <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#MassType"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasStructureType"/>
                 <owl:someValuesFrom rdf:resource="http://eil.stanford.edu/ontologies/brim#StructureType"/>
             </owl:Restriction>
@@ -3450,6 +3462,15 @@
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#ConsistentMass -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#ConsistentMass">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MassType"/>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#LumpedMass"/>
     </owl:Class>
     
 
@@ -4256,6 +4277,14 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#LumpedMass -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#LumpedMass">
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#MassType"/>
+    </owl:Class>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#MassConversionMethod -->
 
     <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MassConversionMethod">
@@ -4269,6 +4298,23 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration"/>
+    </owl:Class>
+    
+
+
+    <!-- http://eil.stanford.edu/ontologies/brim#MassType -->
+
+    <owl:Class rdf:about="http://eil.stanford.edu/ontologies/brim#MassType">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#ConsistentMass"/>
+                    <rdf:Description rdf:about="http://eil.stanford.edu/ontologies/brim#LumpedMass"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://eil.stanford.edu/ontologies/brim#Enumeration"/>
+        <owl:disjointWith rdf:resource="http://eil.stanford.edu/ontologies/brim#Unit"/>
     </owl:Class>
     
 
