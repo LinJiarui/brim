@@ -11,7 +11,9 @@ namespace midas_wrapper
             if(args.Length==0){
                 Console.WriteLine("please specify the input file");
                 Midas2Owl("./data/simple_bridge.mgt","./data/simple_bridge.owl");
+                Midas2Owl("./data/simple_TRB.mgt","./data/simple_TRB.owl");
                 Owl2Midas("./data/simple_bridge.owl","./data/simple_bridge_auto.mgt");
+                Owl2Midas("./data/simple_TRB.owl","./data/simple_TRB_auto.mgt");
                 return;
             }
             foreach(var f in args){

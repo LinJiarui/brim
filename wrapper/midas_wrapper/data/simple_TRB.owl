@@ -1,0 +1,2330 @@
+﻿<?xml version="1.0"?>
+<rdf:RDF xmlns="http://eil.stanford.edu/ontologies/trb#"
+ xml:base="http://eil.stanford.edu/ontologies/trb"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:xml="http://www.w3.org/XML/1998/namespace"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:brim="http://eil.stanford.edu/ontologies/brim#">
+<owl:Ontology rdf:about="http://eil.stanford.edu/ontologies/trb#">
+<owl:imports rdf:resource="http://eil.stanford.edu/ontologies/brim"/>
+</owl:Ontology>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Configuration_0">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Configuration"/>
+<brim:hasGravityAccleration rdf:datatype="http://www.w3.org/2001/XMLSchema#double">386.063</brim:hasGravityAccleration>
+<brim:isAlignBeam rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</brim:isAlignBeam>
+<brim:isAlignSlab rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</brim:isAlignSlab>
+<brim:hasMassConversionMethod rdf:resource="http://eil.stanford.edu/ontologies/trb#_XYZDirection"/>
+<brim:hasStructureType rdf:resource="http://eil.stanford.edu/ontologies/trb#_3DStructure"/>
+<brim:hasForceUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_kips"/>
+<brim:hasHeatUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_Btu"/>
+<brim:hasLengthUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_in"/>
+<brim:hasTemperatureUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_F"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_kgf">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#kgf"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_kips">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#kips"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_kN">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#kN"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_lbf">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#lbf"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_N">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#N"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_tonf">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#tonf"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_Btu">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Btu"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_cal">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#cal"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_J">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#J"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_kcal">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#kcal"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_kJ">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#kJ"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_cm">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#cm"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_ft">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#ft"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_in">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#in"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_m">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#m"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_mm">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#mm"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_F">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#F"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_C">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#C"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_3DStructure">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#3DStructure"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_XYPlaneStructure">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#XYPlaneStructure"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_XZPlaneStructure">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#XZPlaneStructure"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_YZPlaneStructure">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#YZPlaneStructure"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_NoZRotationStructure">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#NoZRotationStructure"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_XYDirection">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#XYDirection"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_XYZDirection">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#XYZDirection"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_ZDirection">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#ZDirection"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Material_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Concrete"/>
+<brim:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4000Psi</brim:hasName>
+<brim:hasThermalConductivityCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasThermalConductivityCoefficient>
+<brim:hasSpecificHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasSpecificHeat>
+<brim:hasUnitWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.681E-05</brim:hasUnitWeight>
+<brim:hasUnitMass rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasUnitMass>
+<brim:hasMaterialType rdf:resource="http://eil.stanford.edu/ontologies/trb#_Isotropic"/>
+<brim:hasElasticModulus rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3605</brim:hasElasticModulus>
+<brim:hasPoissonRatio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.17</brim:hasPoissonRatio>
+<brim:hasThermalExpansionCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.5E-06</brim:hasThermalExpansionCoefficient>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Material_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Steel"/>
+<brim:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A36</brim:hasName>
+<brim:hasThermalConductivityCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasThermalConductivityCoefficient>
+<brim:hasSpecificHeat rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasSpecificHeat>
+<brim:hasUnitWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.0002836</brim:hasUnitWeight>
+<brim:hasUnitMass rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasUnitMass>
+<brim:hasMaterialType rdf:resource="http://eil.stanford.edu/ontologies/trb#_Isotropic"/>
+<brim:hasElasticModulus rdf:datatype="http://www.w3.org/2001/XMLSchema#double">29000</brim:hasElasticModulus>
+<brim:hasPoissonRatio rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.3</brim:hasPoissonRatio>
+<brim:hasThermalExpansionCoefficient rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.5E-06</brim:hasThermalExpansionCoefficient>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_Orthoropic">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Orthoropic"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_Isotropic">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Isotropic"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_Uniaxial">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Uniaxial"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#LineSection_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionIShape"/>
+<brim:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">54</brim:hasHeight>
+<brim:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</brim:hasWebThickness>
+<brim:hasTopFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</brim:hasTopFlangeThickness>
+<brim:hasBottomFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.625</brim:hasBottomFlangeThickness>
+<brim:hasTopFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12</brim:hasTopFlangeWidth>
+<brim:hasBottomFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12</brim:hasBottomFlangeWidth>
+<brim:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asec</brim:hasName>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#LineSection_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionIShape"/>
+<brim:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">54</brim:hasHeight>
+<brim:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5625</brim:hasWebThickness>
+<brim:hasTopFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</brim:hasTopFlangeThickness>
+<brim:hasBottomFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</brim:hasBottomFlangeThickness>
+<brim:hasTopFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19</brim:hasTopFlangeWidth>
+<brim:hasBottomFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19</brim:hasBottomFlangeWidth>
+<brim:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bsec</brim:hasName>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#LineSection_3">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionIShape"/>
+<brim:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">54</brim:hasHeight>
+<brim:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5625</brim:hasWebThickness>
+<brim:hasTopFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</brim:hasTopFlangeThickness>
+<brim:hasBottomFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.875</brim:hasBottomFlangeThickness>
+<brim:hasTopFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19</brim:hasTopFlangeWidth>
+<brim:hasBottomFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19</brim:hasBottomFlangeWidth>
+<brim:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Csec</brim:hasName>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#LineSection_4">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionTShape"/>
+<brim:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27</brim:hasHeight>
+<brim:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</brim:hasWebThickness>
+<brim:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5</brim:hasFlangeThickness>
+<brim:hasFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12</brim:hasFlangeWidth>
+<brim:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AtoB</brim:hasName>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#LineSection_5">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#LineSectionTShape"/>
+<brim:hasHeight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">27</brim:hasHeight>
+<brim:hasWebThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.5625</brim:hasWebThickness>
+<brim:hasFlangeThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1</brim:hasFlangeThickness>
+<brim:hasFlangeWidth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">19</brim:hasFlangeWidth>
+<brim:hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BtoA</brim:hasName>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#AreaSection_0">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Shell"/>
+<brim:hasBendThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasBendThickness>
+<brim:hasMembraneThickness rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8</brim:hasMembraneThickness>
+<brim:hasShellSectionType rdf:resource="http://eil.stanford.edu/ontologies/trb#_ShellThin"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_ShellThin">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellThin"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_PlateThin">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlateThin"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_ShellThick">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#ShellThick"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_PlateThick">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlateThick"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#_Membrane">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Membrane"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_1"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-178.874360183924</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_2"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-95.7355730561849</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_3">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_3"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_3">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-12.5967859284454</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_4">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_4"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_4">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">70.5420011992942</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_5">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_5"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_5">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">153.680788327034</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_6">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_6"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_6">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">236.819575454773</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_7">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_7"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_7">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">319.958362582513</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_8">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_8"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_8">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">325.125639816076</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_9">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_9"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_9">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">408.264426943815</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_10">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_10"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_10">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">491.403214071555</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_11">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_11"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_11">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">574.542001199294</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_12">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_12"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_12">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">657.680788327034</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_13">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_13"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_13">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">740.819575454773</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_14">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_14"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_14">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">823.958362582513</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_15">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_15"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_15">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">379.125639816076</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_16">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_16"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_16">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">462.264426943815</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_17">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_17"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_17">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">545.403214071555</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_18">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_18"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_18">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">628.542001199294</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_19">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_19"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_19">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">711.680788327034</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_20">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_20"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_20">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">794.819575454773</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_21">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_21"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_21">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">877.958362582513</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_22">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_22"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_22">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">397.125639816076</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_23">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_23"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_23">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">480.264426943815</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_24">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_24"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_24">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">563.403214071555</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_25">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_25"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_25">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">646.542001199294</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_26">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_26"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_26">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">729.680788327034</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_27">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_27"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_27">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">812.819575454773</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_28">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_28"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_28">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">895.958362582513</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_29">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_29"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_29">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">415.125639816076</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_30">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_30"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_30">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">498.264426943815</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_31">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_31"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_31">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">581.403214071555</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_32">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_32"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_32">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">664.542001199294</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_33">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_33"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_33">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">747.680788327034</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_34">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_34"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_34">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">830.819575454773</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_35">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_35"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_35">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">913.958362582513</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_36">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_36"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_36">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">719.875639816076</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_37">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_37"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_37">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">803.014426943815</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_38">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_38"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_38">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">886.153214071555</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_39">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_39"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_39">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">969.292001199294</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_40">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_40"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_40">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1052.43078832703</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_41">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_41"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_41">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1135.56957545477</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_42">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_42"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_42">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1218.70836258251</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_43">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_43"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_43">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1485.87563981608</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_44">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_44"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_44">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1569.01442694382</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_45">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_45"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_45">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1652.15321407155</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_46">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_46"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_46">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1735.29200119929</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_47">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_47"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_47">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1818.43078832703</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_48">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_48"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_48">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1901.56957545477</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_49">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_49"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_49">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1984.70836258251</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_50">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_50"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_50">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1790.62563981608</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_51">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_51"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_51">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1873.76442694382</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_52">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_52"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_52">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1956.90321407155</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_53">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_53"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_53">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2040.04200119929</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_54">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_54"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_54">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2123.18078832703</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_55">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_55"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_55">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2206.31957545477</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_56">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_56"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_56">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2289.45836258251</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_57">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_57"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_57">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1808.62563981608</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_58">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_58"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_58">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1891.76442694382</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_59">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_59"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_59">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1974.90321407155</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_60">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_60"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_60">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2058.04200119929</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_61">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_61"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_61">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2141.18078832703</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_62">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_62"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_62">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2224.31957545477</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_63">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_63"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_63">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2307.45836258251</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_64">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_64"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_64">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1826.62563981608</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_65">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_65"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_65">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1909.76442694382</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_66">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_66"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_66">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1992.90321407155</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_67">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_67"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_67">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2076.04200119929</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_68">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_68"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_68">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2159.18078832703</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_69">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_69"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_69">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2242.31957545477</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_70">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_70"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_70">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2325.45836258251</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_71">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_71"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_71">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1880.62563981608</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_72">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_72"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_72">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1963.76442694382</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_73">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_73"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_73">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2046.90321407155</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_74">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_74"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_74">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2130.04200119929</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_75">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_75"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_75">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2213.18078832703</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_76">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_76"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_76">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2296.31957545477</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_77">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_77"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_77">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2379.45836258251</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_78">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_78"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_78">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2384.62563981608</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">213</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_79">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_79"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_79">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2467.76442694382</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_80">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_80"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_80">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2550.90321407156</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_81">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_81"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_81">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2634.0420011993</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-84</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_82">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_82"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_82">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2717.18078832703</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-183</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_83">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_83"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_83">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2800.31957545477</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-282</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Node_84">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#Node"/>
+<brim:hasPoint rdf:resource="http://eil.stanford.edu/ontologies/trb#Point_84"/>
+<brim:hasRestraintData rdf:resource="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Point_84">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#CartesianPoint"/>
+<brim:hasX rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2883.45836258251</brim:hasX>
+<brim:hasY rdf:datatype="http://www.w3.org/2001/XMLSchema#double">-381</brim:hasY>
+<brim:hasZ rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasZ>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#NodeRestraint_0">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#NodeRestraint"/>
+<brim:hasRestraintUx rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasRestraintUx>
+<brim:hasRestraintUy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasRestraintUy>
+<brim:hasRestraintUz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasRestraintUz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#NodeRestraint_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#NodeRestraint"/>
+<brim:hasRestraintUz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasRestraintUz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_1"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_8"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_2"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_9"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_3">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_3"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_10"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_4">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_4"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_11"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_5">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_5"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_12"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_6">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_6"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_13"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_7">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_7"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_14"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_8">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_8"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_15"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_9">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_9"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_16"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_10">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_10"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_17"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_11">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_11"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_18"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_12">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_12"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_19"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_13">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_13"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_20"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_14">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_14"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_21"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_15">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_15"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_22"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_15_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_15_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_16">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_16"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_23"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_16_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_16_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_17">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_17"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_24"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_17_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_17_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_18">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_18"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_25"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_18_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_18_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_19">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_19"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_26"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_19_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_19_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_20">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_20"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_27"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_20_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_20_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_21">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_21"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_28"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_21_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_21_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_22">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_22"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_29"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_22_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_22_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_23">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_23"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_30"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_23_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_23_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_24">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_24"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_31"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_24_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_24_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_25">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_25"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_32"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_25_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_25_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_26">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_26"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_33"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_26_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_26_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_27">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_27"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_34"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_27_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_27_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_28">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_28"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_35"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_28_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_28_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_29">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_29"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_36"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_30">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_30"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_37"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_31">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_31"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_38"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_32">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_32"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_39"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_33">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_33"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_40"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_34">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_34"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_41"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_35">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_35"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_42"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_36">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_36"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_43"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_3"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_37">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_37"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_44"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_3"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_38">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_38"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_45"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_3"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_39">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_39"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_46"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_3"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_40">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_40"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_47"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_3"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_41">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_41"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_48"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_3"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_42">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_42"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_49"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_3"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_43">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_43"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_50"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_44">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_44"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_51"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_45">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_45"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_52"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_46">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_46"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_53"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_47">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_47"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_54"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_48">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_48"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_55"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_49">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_49"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_56"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_50">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_50"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_57"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_50_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_50_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_51">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_51"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_58"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_51_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_51_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_52">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_52"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_59"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_52_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_52_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_53">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_53"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_60"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_53_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_53_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_54">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_54"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_61"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_54_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_54_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_55">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_55"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_62"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_55_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_55_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_56">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_56"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_63"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_5"/>
+<brim:hasFrameReleaseAtNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_56_2"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_56_2">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_57">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_57"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_64"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_57_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_57_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_58">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_58"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_65"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_58_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_58_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_59">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_59"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_66"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_59_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_59_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_60">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_60"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_67"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_60_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_60_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_61">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_61"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_68"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_61_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_61_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_62">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_62"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_69"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_62_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_62_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_63">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_63"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_70"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_4"/>
+<brim:hasFrameReleaseAtNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#FrameRelease_63_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#FrameRelease_63_1">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameRelease"/>
+<brim:hasFrameReleaseRy rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRy>
+<brim:hasFrameReleaseValueRy rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRy>
+<brim:hasFrameReleaseRz rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasFrameReleaseRz>
+<brim:hasFrameReleaseValueRz rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasFrameReleaseValueRz>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_64">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_64"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_71"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_65">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_65"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_72"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_66">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_66"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_73"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_67">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_67"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_74"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_68">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_68"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_75"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_69">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_69"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_76"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_70">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_70"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_77"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_71">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_71"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_78"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_72">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_72"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_79"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_73">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_73"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_80"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_74">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_74"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_81"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_75">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_75"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_82"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_76">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_76"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_83"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Frame_77">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#FrameElement"/>
+<brim:hasNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_77"/>
+<brim:hasNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_84"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_2"/>
+<brim:hasLineSection rdf:resource="http://eil.stanford.edu/ontologies/trb#LineSection_1"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_78">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_1"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_2"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_9"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_8"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_79">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_2"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_3"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_10"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_9"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_80">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_3"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_4"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_11"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_10"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_81">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_4"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_5"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_12"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_11"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_82">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_5"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_6"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_13"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_12"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_83">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_6"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_7"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_14"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_13"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_84">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_8"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_9"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_16"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_15"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_85">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_9"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_10"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_17"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_16"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_86">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_10"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_11"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_18"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_17"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_87">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_11"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_12"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_19"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_18"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_88">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_12"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_13"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_20"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_19"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_89">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_13"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_14"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_21"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_20"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_96">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_22"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_23"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_30"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_29"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_97">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_23"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_24"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_31"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_30"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_98">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_24"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_25"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_32"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_31"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_99">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_25"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_26"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_33"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_32"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_100">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_26"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_27"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_34"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_33"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_101">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_27"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_28"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_35"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_34"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_102">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_29"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_30"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_37"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_36"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_103">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_30"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_31"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_38"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_37"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_104">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_31"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_32"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_39"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_38"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_105">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_32"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_33"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_40"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_39"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_106">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_33"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_34"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_41"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_40"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_107">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_34"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_35"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_42"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_41"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_108">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_36"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_37"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_44"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_43"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_109">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_37"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_38"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_45"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_44"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_110">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_38"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_39"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_46"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_45"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_111">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_39"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_40"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_47"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_46"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_112">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_40"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_41"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_48"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_47"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_113">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_41"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_42"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_49"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_48"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_114">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_43"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_44"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_51"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_50"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_115">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_44"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_45"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_52"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_51"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_116">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_45"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_46"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_53"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_52"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_117">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_46"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_47"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_54"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_53"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_118">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_47"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_48"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_55"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_54"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_119">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_48"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_49"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_56"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_55"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_120">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_50"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_51"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_58"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_57"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_121">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_51"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_52"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_59"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_58"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_122">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_52"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_53"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_60"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_59"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_123">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_53"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_54"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_61"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_60"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_124">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_54"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_55"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_62"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_61"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_125">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_55"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_56"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_63"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_62"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_132">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_64"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_65"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_72"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_71"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_133">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_65"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_66"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_73"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_72"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_134">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_66"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_67"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_74"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_73"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_135">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_67"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_68"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_75"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_74"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_136">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_68"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_69"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_76"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_75"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_137">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_69"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_70"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_77"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_76"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_138">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_71"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_72"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_79"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_78"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_139">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_72"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_73"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_80"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_79"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_140">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_73"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_74"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_81"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_80"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_141">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_74"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_75"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_82"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_81"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_142">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_75"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_76"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_83"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_82"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://eil.stanford.edu/ontologies/trb#Planar_143">
+<rdf:type rdf:resource="http://eil.stanford.edu/ontologies/brim#PlanarElement"/>
+<brim:hasAreaNode1 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_76"/>
+<brim:hasAreaNode2 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_77"/>
+<brim:hasAreaNode3 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_84"/>
+<brim:hasAreaNode4 rdf:resource="http://eil.stanford.edu/ontologies/trb#Node_83"/>
+<brim:hasMaterial rdf:resource="http://eil.stanford.edu/ontologies/trb#Material_1"/>
+<brim:hasAreaSection rdf:resource="http://eil.stanford.edu/ontologies/trb#AreaSection_0"/>
+</owl:NamedIndividual>
+</rdf:RDF>
