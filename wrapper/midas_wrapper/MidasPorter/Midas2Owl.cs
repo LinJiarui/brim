@@ -17,6 +17,7 @@ namespace Porter.Midas
         protected Dictionary<string, string> struct_type_mapper = new Dictionary<string, string>();
         protected Dictionary<string, string> mass_conversion_mapper = new Dictionary<string, string>();
         protected Dictionary<string, string> mass_type_mapper = new Dictionary<string, string>();
+        protected Dictionary<string, string> sec_offset_mapper = new Dictionary<string, string>();
         public Midas2Owl(string base_xmlns, MidasPorterData data)
         {
             this.base_uri = base_xmlns;
@@ -59,6 +60,16 @@ namespace Porter.Midas
 
             mass_type_mapper["1"] = "LumpedMass";
             mass_type_mapper["2"] = "ConsistentMass";
+
+            mass_type_mapper["LT"] = "LeftTop";            
+            mass_type_mapper["LC"] = "LeftCenter";            
+            mass_type_mapper["LB"] = "LeftBottom";       
+             mass_type_mapper["CT"] = "CenterTop";            
+            mass_type_mapper["CC"] = "CenterCenter";            
+            mass_type_mapper["CB"] = "CenterBottom";       
+             mass_type_mapper["RT"] = "RightTop";            
+            mass_type_mapper["RC"] = "RightCenter";            
+            mass_type_mapper["RB"] = "RightBottom";            
         }
         /// <summary>
         /// 
@@ -196,6 +207,17 @@ namespace Porter.Midas
 
             ExportEnumIndividual(writer, "brim", "LumpedMass");
             ExportEnumIndividual(writer, "brim", "ConsistentMass");
+
+            ExportEnumIndividual(writer, "brim", "LeftTop");
+            ExportEnumIndividual(writer, "brim", "LeftCenter");
+            ExportEnumIndividual(writer, "brim", "LeftBottom");
+            ExportEnumIndividual(writer, "brim", "CenterTop");
+            ExportEnumIndividual(writer, "brim", "CenterCenter");
+            ExportEnumIndividual(writer, "brim", "CenterBottom");
+            ExportEnumIndividual(writer, "brim", "RightTop");
+            ExportEnumIndividual(writer, "brim", "RightCenter");
+            ExportEnumIndividual(writer, "brim", "RightBottom");
+            
         }
 
         private void ExportMaterials(StreamWriter writer)

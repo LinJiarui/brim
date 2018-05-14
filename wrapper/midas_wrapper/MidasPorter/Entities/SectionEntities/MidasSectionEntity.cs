@@ -27,14 +27,25 @@ namespace Porter.Midas.Entities.SectionEntities
         public string Number { get { return _number; } set { _number = value; } }
         //public string SecType { get { return _secType; } set { _secType = value; } }
         public string SecName { get { return _secName; } set { _secName = value; } }
+
+        public string Offset { get; private set; }="CC";
+        public string ICent { get; private set; }="0";
+        public string IRef { get; private set; }="0";
+        public string IHorizontalZ { get; private set; }="0";
+        public double HUser { get; private set; }
+        public string IVertical { get; private set; }="0";
+        public double VUser { get; private set; }
+        public bool ShearDeformation { get; private set; }=true;
+        public bool WrinkleEffect { get; private set; }
+
         /*public string Offset { get { return _offset; } set { _offset = value; } }
-        public string Icent { get { return _icent; } set { _icent = value; } }
-        public string Iref { get { return _iref; } set { _iref = value; } }
-        public string Ihorz { get { return _ihorz; } set { _ihorz = value; } }
-        public double Huser { get { return _huser; } set { _huser = value; } }
-        public string Ivert { get { return _ivert; } set { _ivert = value; } }
-        public double Vuser { get { return _vuser; } set { _vuser = value; } }
-        public bool Bsd { get { return _bsd; } set { _bsd = value; } }*/
+public string Icent { get { return _icent; } set { _icent = value; } }
+public string Iref { get { return _iref; } set { _iref = value; } }
+public string Ihorz { get { return _ihorz; } set { _ihorz = value; } }
+public double Huser { get { return _huser; } set { _huser = value; } }
+public string Ivert { get { return _ivert; } set { _ivert = value; } }
+public double Vuser { get { return _vuser; } set { _vuser = value; } }
+public bool Bsd { get { return _bsd; } set { _bsd = value; } }*/
         public string Shape { get { return _shape; } set { _shape = value; } }
         public string DataType { get { return _dataType; } set { _dataType = value; } }
         /*public string DB { get { return _db; } set { _db = value; } }
@@ -62,15 +73,15 @@ namespace Porter.Midas.Entities.SectionEntities
                 sec.Number = secID;
                 //sec.SecType = strList[1];
                 sec.SecName = strList[2];
-                /*sec.Offset = strList[3];
-                sec.Icent = strList[4];
-                sec.Iref = strList[5];
-                sec.Ihorz = strList[6];
-                sec.Huser = Convert.ToDouble(strList[7]);
-                sec.Ivert = strList[8];
-                sec.Vuser = Convert.ToDouble(strList[9]);
-                sec.Bsd = (strList[10] == "YES" ? true : false);
-                sec.Bsd = (strList[11] == "YES" ? true : false);*/
+                sec.Offset = strList[3];
+                sec.ICent = strList[4];
+                sec.IRef = strList[5];
+                sec.IHorizontalZ = strList[6];
+                sec.HUser = Convert.ToDouble(strList[7]);
+                sec.IVertical = strList[8];
+                sec.VUser = Convert.ToDouble(strList[9]);
+                sec.ShearDeformation = (strList[10] == "YES" ? true : false);
+                sec.WrinkleEffect = (strList[11] == "YES" ? true : false);
                 sec.Shape = strList[12];
                 sec.DataType = strList[13];
 

@@ -231,7 +231,16 @@ namespace Porter.Midas
                     MidasRectangleSectionEntity section = item as MidasRectangleSectionEntity;
                     writer.Write(section.Number + ",DBUSER,");
                     writer.Write(section.SecName + ",");
-                    writer.Write("CC,0,0,0,0,0,0,YES,NO,");
+                    //writer.Write("CC,0,0,0,0,0,0,YES,NO,");
+                    writer.Write(section.Offset+",");
+                    writer.Write(section.ICent+",");
+                    writer.Write(section.IRef+",");
+                    writer.Write(section.IHorizontalZ+",");
+                    writer.Write(section.HUser+",");
+                    writer.Write(section.IVertical+",");
+                    writer.Write(section.VUser+",");
+                    writer.Write(section.ShearDeformation?"YES,":"NO,");
+                    writer.Write(section.WrinkleEffect?"YES,":"NO,");
                     writer.Write("SB,");
                     writer.Write("2,");
                     writer.Write(section.Height + "," + section.Width + ",");
