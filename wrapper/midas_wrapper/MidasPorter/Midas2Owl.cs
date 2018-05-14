@@ -140,6 +140,8 @@ namespace Porter.Midas
                 writer.WriteLine(FormatIndividualProperty("brim", "hasStructureType", "_" + struct_type_mapper[porter_data.StructypeEntity.StrucType.ToLower()]));
             }
 
+            //TODO deal with SelfWeight, Temperature, and other properties
+
             if (!string.IsNullOrWhiteSpace(porter_data.UnitEntity.ForceUnit))
             {
                 writer.WriteLine(FormatIndividualProperty("brim", "hasForceUnit", "_" + unit_mapper[porter_data.UnitEntity.ForceUnit.ToLower()]));
