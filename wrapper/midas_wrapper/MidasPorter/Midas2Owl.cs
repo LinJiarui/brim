@@ -141,6 +141,8 @@ namespace Porter.Midas
             }
 
             //TODO deal with SelfWeight, Temperature, and other properties
+            writer.WriteLine(FormatPrimitiveProperty("brim","hasSelfWeight",porter_data.StructypeEntity.SelfWeight));
+            writer.WriteLine(FormatPrimitiveProperty("brim","hasInitialTemperature",porter_data.StructypeEntity.Temper));
 
             if (!string.IsNullOrWhiteSpace(porter_data.UnitEntity.ForceUnit))
             {

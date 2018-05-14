@@ -18,6 +18,8 @@
 <brim:hasMassType rdf:resource="http://eil.stanford.edu/ontologies/trb#_ConsistentMass"/>
 <brim:hasMassConversionMethod rdf:resource="http://eil.stanford.edu/ontologies/trb#_XYZDirection"/>
 <brim:hasStructureType rdf:resource="http://eil.stanford.edu/ontologies/trb#_XZPlaneStructure"/>
+<brim:hasSelfWeight rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</brim:hasSelfWeight>
+<brim:hasInitialTemperature rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0</brim:hasInitialTemperature>
 <brim:hasForceUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_kips"/>
 <brim:hasHeatUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_Btu"/>
 <brim:hasLengthUnit rdf:resource="http://eil.stanford.edu/ontologies/trb#_in"/>

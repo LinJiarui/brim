@@ -2612,6 +2612,16 @@
     
 
 
+    <!-- http://eil.stanford.edu/ontologies/brim#hasSelfWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasSelfWeight">
+        <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasConfigurationData"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://eil.stanford.edu/ontologies/brim#hasShearDeformation -->
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasShearDeformation">
@@ -3612,6 +3622,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasInitialTemperature"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://eil.stanford.edu/ontologies/brim#hasSelfWeight"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
