@@ -8,7 +8,7 @@ namespace Porter.Midas.Entities
     public class MidasStructypeEntity
     {
         private string _strucType;
-        private string _invertMass;
+        private string _massType;
         private string _howToMass;
         private bool _massOffset;
         private bool _selfWeight;
@@ -19,7 +19,10 @@ namespace Porter.Midas.Entities
         private bool _rotateRigid;
 
         public string StrucType { get { return _strucType; } set { _strucType = value; } }
-        public string InvertMass { get { return _invertMass; } set { _invertMass = value; } }
+        ///<summary>
+        ///0:None,1: Lumped Mass,2: ConsistentMass
+        ///</summary>
+        public string MassType { get { return _massType; } set { _massType = value; } }
         public string HowToMass { get { return _howToMass; } set { _howToMass = value; } }
         public bool MassOffset { get { return _massOffset; } set { _massOffset = value; } }
         public bool SelfWeight { get { return _selfWeight; } set { _selfWeight = value; } }
@@ -38,7 +41,7 @@ namespace Porter.Midas.Entities
             }
             List<string> strList = StringUtility.Split(str, ",");
             _strucType = strList[0];
-            _invertMass = strList[1];
+            _massType = strList[1];
             _howToMass = strList[2];
             _massOffset = (strList[3] == "YES" ? true : false);
             _selfWeight = (strList[4] == "YES" ? true : false);

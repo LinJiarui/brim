@@ -16,6 +16,7 @@ namespace Porter.Midas
         protected Dictionary<string, string> unit_mapper = new Dictionary<string, string>();
         protected Dictionary<string, string> struct_type_mapper = new Dictionary<string, string>();
         protected Dictionary<string, string> mass_conversion_mapper = new Dictionary<string, string>();
+        protected Dictionary<string, string> mass_type_mapper = new Dictionary<string, string>();
         public Midas2Owl(string base_xmlns, MidasPorterData data)
         {
             this.base_uri = base_xmlns;
@@ -55,6 +56,9 @@ namespace Porter.Midas
             mass_conversion_mapper["1"] = "XYZDirection";
             mass_conversion_mapper["2"] = "XYDirection";
             mass_conversion_mapper["3"] = "ZDirection";
+
+            mass_type_mapper["1"] = "LumpedMass";
+            mass_type_mapper["2"] = "ConsistentMass";
         }
         /// <summary>
         /// 
@@ -123,6 +127,10 @@ namespace Porter.Midas
             writer.WriteLine(FormatPrimitiveProperty("brim", "hasGravityAccleration", porter_data.StructypeEntity.Gravity));
             writer.WriteLine(FormatPrimitiveProperty("brim", "isAlignBeam", porter_data.StructypeEntity.AlignBeam));
             writer.WriteLine(FormatPrimitiveProperty("brim", "isAlignSlab", porter_data.StructypeEntity.AlignSlab));
+            if (!string.IsNullOrWhiteSpace(porter_data.StructypeEntity.MassType) && porter_data.StructypeEntity.MassType != "0")
+            {
+                writer.WriteLine(FormatIndividualProperty("brim", "hasMassType", "_" + mass_type_mapper[porter_data.StructypeEntity.MassType.ToLower()]));
+            }
             if (!string.IsNullOrWhiteSpace(porter_data.StructypeEntity.HowToMass) && porter_data.StructypeEntity.HowToMass != "0")
             {
                 writer.WriteLine(FormatIndividualProperty("brim", "hasMassConversionMethod", "_" + mass_conversion_mapper[porter_data.StructypeEntity.HowToMass.ToLower()]));
@@ -131,6 +139,10 @@ namespace Porter.Midas
             {
                 writer.WriteLine(FormatIndividualProperty("brim", "hasStructureType", "_" + struct_type_mapper[porter_data.StructypeEntity.StrucType.ToLower()]));
             }
+
+            //TODO deal with SelfWeight, Temperature, and other properties
+            writer.WriteLine(FormatPrimitiveProperty("brim","hasSelfWeight",porter_data.StructypeEntity.SelfWeight));
+            writer.WriteLine(FormatPrimitiveProperty("brim","hasInitialTemperature",porter_data.StructypeEntity.Temper));
 
             if (!string.IsNullOrWhiteSpace(porter_data.UnitEntity.ForceUnit))
             {
@@ -181,6 +193,9 @@ namespace Porter.Midas
             ExportEnumIndividual(writer, "brim", "XYDirection");
             ExportEnumIndividual(writer, "brim", "XYZDirection");
             ExportEnumIndividual(writer, "brim", "ZDirection");
+
+            ExportEnumIndividual(writer, "brim", "LumpedMass");
+            ExportEnumIndividual(writer, "brim", "ConsistentMass");
         }
 
         private void ExportMaterials(StreamWriter writer)
@@ -397,23 +412,22 @@ namespace Porter.Midas
                 writer.WriteLine(FormatPrimitiveProperty("brim", "hasY", node.Y));
                 writer.WriteLine(FormatPrimitiveProperty("brim", "hasZ", node.Z));
                 writer.WriteLine(FormatIndividualEnd());
+            }
 
+            //export constraints or node restraints
+            int count = 0;
+            foreach (var constraint in constraints)
+            {
+                writer.WriteLine(FormatIndividualStart("NodeRestraint_" + count++));
+                writer.WriteLine(FormatIndividualType("brim", "NodeRestraint"));
+                if (constraint[0] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintUx", true)); }
+                if (constraint[1] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintUy", true)); }
+                if (constraint[2] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintUz", true)); }
 
-                //export constraints or node restraints
-                int count = 0;
-                foreach (var constraint in constraints)
-                {
-                    writer.WriteLine(FormatIndividualStart("NodeRestraint_" + count++));
-                    writer.WriteLine(FormatIndividualType("brim", "NodeRestraint"));
-                    if (constraint[0] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintUx", 0)); }
-                    if (constraint[1] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintUy", 0)); }
-                    if (constraint[2] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintUz", 0)); }
-
-                    if (constraint[3] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintRx", 0)); }
-                    if (constraint[4] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintRy", 0)); }
-                    if (constraint[5] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintRz", 0)); }
-                    writer.WriteLine(FormatIndividualEnd());
-                }
+                if (constraint[3] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintRx", true)); }
+                if (constraint[4] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintRy", true)); }
+                if (constraint[5] == '1') { writer.WriteLine(FormatPrimitiveProperty("brim", "hasRestraintRz", true)); }
+                writer.WriteLine(FormatIndividualEnd());
             }
         }
 
@@ -454,24 +468,60 @@ namespace Porter.Midas
                     {
                         writer.WriteLine(FormatIndividualStart("FrameRelease_" + key + "_1"));
                         writer.WriteLine(FormatIndividualType("brim", "FrameRelease"));
-                        if (release.ReleaseComponentsAtI[0]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUx", release.HasComponentValue?release.ComponentValuesAtI[0]:0)); }
-                        if (release.ReleaseComponentsAtI[1]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUy", release.HasComponentValue?release.ComponentValuesAtI[1]:0)); }
-                        if (release.ReleaseComponentsAtI[2]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUz", release.HasComponentValue?release.ComponentValuesAtI[2]:0)); }
-                        if (release.ReleaseComponentsAtI[3]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRx", release.HasComponentValue?release.ComponentValuesAtI[3]:0)); }
-                        if (release.ReleaseComponentsAtI[4]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRy", release.HasComponentValue?release.ComponentValuesAtI[4]:0)); }
-                        if (release.ReleaseComponentsAtI[5]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRz", release.HasComponentValue?release.ComponentValuesAtI[5]:0)); }
+                        if (release.ReleaseComponentsAtI[0]) {
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUx", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueUx", release.HasComponentValue?release.ComponentValuesAtI[0]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtI[1]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUy", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueUy", release.HasComponentValue?release.ComponentValuesAtI[1]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtI[2]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUz", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueUz", release.HasComponentValue?release.ComponentValuesAtI[2]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtI[3]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRx", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueRx", release.HasComponentValue?release.ComponentValuesAtI[3]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtI[4]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRy", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueRy", release.HasComponentValue?release.ComponentValuesAtI[4]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtI[5]) {
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRz", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueRz", release.HasComponentValue?release.ComponentValuesAtI[5]:0)); 
+                        }
                         writer.WriteLine(FormatIndividualEnd());
                     }
                     if (release.ReleaseComponentsAtJ.Any(b => b))
                     {
                         writer.WriteLine(FormatIndividualStart("FrameRelease_" + key + "_2"));
                         writer.WriteLine(FormatIndividualType("brim", "FrameRelease"));
-                        if (release.ReleaseComponentsAtJ[0]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUx", release.HasComponentValue ? release.ComponentValuesAtJ[0] : 0)); }
-                        if (release.ReleaseComponentsAtJ[1]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUy", release.HasComponentValue ? release.ComponentValuesAtJ[1] : 0)); }
-                        if (release.ReleaseComponentsAtJ[2]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUz", release.HasComponentValue ? release.ComponentValuesAtJ[2] : 0)); }
-                        if (release.ReleaseComponentsAtJ[3]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRx", release.HasComponentValue ? release.ComponentValuesAtJ[3] : 0)); }
-                        if (release.ReleaseComponentsAtJ[4]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRy", release.HasComponentValue ? release.ComponentValuesAtJ[4] : 0)); }
-                        if (release.ReleaseComponentsAtJ[5]) { writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRz", release.HasComponentValue ? release.ComponentValuesAtJ[5] : 0)); }
+                        if (release.ReleaseComponentsAtJ[0]) {
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUx", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueUx", release.HasComponentValue?release.ComponentValuesAtJ[0]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtJ[1]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUy", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueUy", release.HasComponentValue?release.ComponentValuesAtJ[1]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtJ[2]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseUz", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueUz", release.HasComponentValue?release.ComponentValuesAtJ[2]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtJ[3]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRx", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueRx", release.HasComponentValue?release.ComponentValuesAtJ[3]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtJ[4]) { 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRy", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueRy", release.HasComponentValue?release.ComponentValuesAtJ[4]:0)); 
+                        }
+                        if (release.ReleaseComponentsAtJ[5]) {
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseRz", true)); 
+                            writer.WriteLine(FormatPrimitiveProperty("brim", "hasFrameReleaseValueRz", release.HasComponentValue?release.ComponentValuesAtJ[5]:0)); 
+                        }
                         writer.WriteLine(FormatIndividualEnd());
                     }
                 }
@@ -527,7 +577,7 @@ namespace Porter.Midas
                 if (type == typeof(int)) { propType = "int"; }
                 else if (type == typeof(float)) { propType = "double"; }
                 if (type == typeof(double)) { propType = "double"; }
-                if (type == typeof(bool)) { propType = "boolean"; }
+                if (type == typeof(bool)) { propType = "boolean"; propValue=propValue.ToString().ToLower();}
             }
 
             return string.Format("<{0}:{1} rdf:datatype=\"{2}#{3}\">{4}</{0}:{1}>", prefix, propName, xmlns, propType, propValue);

@@ -107,9 +107,9 @@ namespace Porter.Midas
             {
                 writer.Write("0,");
             }
-            if (_midasPorterData.StructypeEntity.InvertMass != null)
+            if (_midasPorterData.StructypeEntity.MassType != null)
             {
-                writer.Write(_midasPorterData.StructypeEntity.InvertMass + ",");
+                writer.Write(_midasPorterData.StructypeEntity.MassType + ",");
             }
             else
             {
@@ -449,7 +449,7 @@ namespace Porter.Midas
                 maxLineId = Math.Max(maxLineId, int.Parse(line.LineName));
             }
 
-            eId = maxLineId;
+            eId = maxLineId+1;
             foreach (MidasAreaEntity area in _midasPorterData.AreaDict.Values)
             {
                 writer.Write(eId + ",");
