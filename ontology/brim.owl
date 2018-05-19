@@ -1486,7 +1486,6 @@
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFlangeThickness">
         <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -1496,7 +1495,6 @@
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasFlangeWidth">
         <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasLineSectionData"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -2087,6 +2085,7 @@
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasMembraneThickness">
         <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasThickness"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -2985,7 +2984,6 @@
 
     <owl:DatatypeProperty rdf:about="http://eil.stanford.edu/ontologies/brim#hasThickness">
         <rdfs:subPropertyOf rdf:resource="http://eil.stanford.edu/ontologies/brim#hasAreaSectionData"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
